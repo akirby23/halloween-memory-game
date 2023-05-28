@@ -1,5 +1,9 @@
 let cardsContainer = document.querySelector(".cards");
 
+/**
+ * 
+ * Get image data 
+ */
 let getImages = () => [
     { imgSrc: "assets/images/cards/halloween-balloons.png", name: "balloons" },
     { imgSrc: "assets/images/cards/halloween-castle.png", name: "castle" },
@@ -15,3 +19,9 @@ let getImages = () => [
 let images = getImages();
 let imagesPicklist = [...images, ...images];
 
+/**
+ * Randomize the cards
+ */
+let cardData = imagesPicklist;
+cardData.sort(() => Math.random() - 0.5);
+console.log(cardData);
