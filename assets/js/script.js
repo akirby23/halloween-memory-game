@@ -1,7 +1,6 @@
-let cardsContainer = document.querySelector(".cards");
+let section = document.querySelector("section");
 
 /**
- * 
  * Get image data 
  */
 let getImages = () => [
@@ -22,6 +21,32 @@ let imagesPicklist = [...images, ...images];
 /**
  * Randomize the cards
  */
-let cardData = imagesPicklist;
-cardData.sort(() => Math.random() - 0.5);
-console.log(cardData);
+let randomize = () => {
+    let cardData = imagesPicklist;
+    cardData.sort(() => Math.random() - 0.5);
+    return cardData;
+};
+
+/**
+ * Generate the cards
+ */
+function cardGenerator() {
+    let cardData = randomize();
+    //Generate the HTML
+    cardData.forEach((item) => {
+        let card = document.createElement("div");
+        let face = document.createElement("img");
+        let back = document.createElement("div");
+        card.classList = "card";
+        face.classList = "face";
+        back.classList = "back";
+        //Append images to the cards
+        face.src = item.imgSrc;
+        //Append cards to the section
+        section.appendChild(card);
+        card.appendChild(face);
+        card.appendChild(back);
+    });
+};
+
+cardGenerator();
