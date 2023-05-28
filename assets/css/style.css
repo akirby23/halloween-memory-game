@@ -4,16 +4,29 @@
     box-sizing: border-box;
 }
 
-.cards {
-    margin: 50px auto;
-    width: max-content;
+body {
+    background-color: #d8b9ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section {
     display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 16px;
+    grid-template-columns: repeat(4, 8rem);
+    grid-gap: 2rem;
 }
 
 .card {
-    height: 100px;
     background-color: #b2b2c0;
     border-radius: 17px;
+}
+
+.card,
+.face,
+.back {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
 }
