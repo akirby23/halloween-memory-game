@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.cards {
+    margin: 50px auto;
+    width: max-content;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 16px;
+}
+
+.card {
+    height: 100px;
+    background-color: #b2b2c0;
+    border-radius: 17px;
+}
