@@ -15,18 +15,25 @@ body {
 section {
     display: grid;
     grid-template-columns: repeat(4, 8rem);
+    grid-template-rows: repeat(5, 8rem);
     grid-gap: 2rem;
 }
 
 .card {
     background-color: #b2b2c0;
     border-radius: 17px;
+    position: relative;
 }
 
-.card,
 .face,
 .back {
     width: 100%;
+    height: 100%;
     text-align: center;
     padding: 5px;
+    position: absolute;
+}
+
+.back {
+    background-color: black;
 }
