@@ -1,5 +1,6 @@
-let section = document.querySelector("section");
 
+
+let section = document.querySelector("section");
 /**
  * Get image data 
  */
@@ -26,7 +27,6 @@ let randomize = () => {
     cardData.sort(() => Math.random() - 0.5);
     return cardData;
 };
-
 
 /*
  * Generate the cards

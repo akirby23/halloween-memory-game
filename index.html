@@ -15,16 +15,33 @@
     <h1>Memory Game</h1>
 
     <section>
+        <!-- Main menu -->
         <div id="main-menu">
-            <button type="button" data-type="new-game">
+            <button type="button" id="new-game">
                 New Game
             </button>
-            <button type="button" data-type="about">
+            <button type="button" id="about">
                 About
             </button>
-            <button type="button" data-type="instructions">
+            <button type="button" id="instructions">
                 Instructions
             </button>
+        </div>
+
+        <!-- Select Difficulty modal -->
+        <div id="difficulty" class="modal">
+            <div class="modal-content">
+                <h2>Select Difficulty</h2>
+                <button type="button" data-type="easy">
+                    Easy
+                </button>
+                <button type="button" data-type="medium">
+                    Medium
+                </button>
+                <button type="button" data-type="hard">
+                    Hard
+                </button>
+            </div>
         </div>
     </section>
 
