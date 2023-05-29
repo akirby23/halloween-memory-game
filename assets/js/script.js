@@ -27,7 +27,8 @@ let randomize = () => {
     return cardData;
 };
 
-/**
+
+/*
  * Generate the cards
  */
 function cardGenerator() {
@@ -49,4 +50,6 @@ function cardGenerator() {
     });
 };
 
+/*
 cardGenerator();
+*\
