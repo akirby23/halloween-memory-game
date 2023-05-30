@@ -17,19 +17,19 @@
     <section>
         <!-- Main menu -->
         <div id="main-menu">
-            <button type="button" id="new-game">
+            <button type="button" data-modal="new-game">
                 New Game
             </button>
-            <button type="button" id="about">
+            <button type="button" data-modal="about">
                 About
             </button>
-            <button type="button" id="instructions">
+            <button type="button" data-modal="instructions">
                 Instructions
             </button>
         </div>
 
         <!-- Select Difficulty modal -->
-        <div id="difficulty" class="modal">
+        <div class="modal modal-open">
             <div class="modal-content">
                 <h2>Select Difficulty</h2>
                 <button type="button" data-type="easy">
@@ -45,7 +45,7 @@
         </div>
 
         <!-- About modal -->
-        <div id="about" class="modal">
+        <div id="about" class="modal modal-open">
             <div class="modal-content">
                 <h2>About</h2>
                 <p>Placeholder</p>
@@ -54,13 +54,13 @@
     </section>
 
     <!-- Instructions modal -->
-            <div id="instructions" class="modal">
-                <div class="modal-content">
-                    <h2>Instructions</h2>
-                    <p>Placeholder</p>
-                </div>
-            </div>
-            </section>
+    <div id="instructions" class="modal modal-open">
+        <div class="modal-content">
+            <h2>Instructions</h2>
+            <p>Placeholder</p>
+        </div>
+    </div>
+    </section>
 
     <script src="assets/js/script.js"></script>
 </body>

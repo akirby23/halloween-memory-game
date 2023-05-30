@@ -1,8 +1,7 @@
 
-
 let section = document.querySelector("section");
 /**
- * Get image data 
+ * Get the images
  */
 let getImages = () => [
     { imgSrc: "assets/images/cards/halloween-balloons.png", name: "balloons" },
@@ -50,6 +49,6 @@ function cardGenerator() {
     });
 };
 
-/*
 cardGenerator();
-*\
+
+

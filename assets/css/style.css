@@ -23,6 +23,8 @@ section {
     background-color: #b2b2c0;
     border-radius: 17px;
     position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease;
 }
 
 .face,
@@ -36,10 +38,17 @@ section {
 
 .back {
     background-color: black;
+    transform: rotateY(180deg);
 }
 
-/*
+.flipCard {
+    transform: rotateY(180deg);
+}
+
 .modal {
     display: none;
 }
-*/
+
+#main-menu {
+    display: none;
+}
