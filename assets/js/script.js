@@ -27,6 +27,7 @@ let randomize = () => {
     return cardData;
 };
 
+
 /*
  * Generate the cards
  */
@@ -50,5 +51,12 @@ function cardGenerator() {
 };
 
 cardGenerator();
+
+let back = document.querySelectorAll(".back");
+[...back].forEach((back) => {
+    back.addEventListener('click', () => {
+        card.classList.toggle(flipcard);
+    });
+});
 
 
