@@ -47,16 +47,15 @@ function cardGenerator() {
         section.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
+
+        card.addEventListener("click", (e) => {
+            card.classList.toggle("flipCard");
+        });
     });
 };
 
 cardGenerator();
 
-let back = document.querySelectorAll(".back");
-[...back].forEach((back) => {
-    back.addEventListener('click', () => {
-        card.classList.toggle(flipcard);
-    });
-});
+
 
 
