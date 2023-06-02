@@ -29,7 +29,6 @@ function randomize() {
     return cardData;
 }
 
-
 /*
  * Generate the cards
  */
@@ -56,7 +55,7 @@ function cardGenerator() {
     });
 };
 
-cardGenerator();
+
 
 
 

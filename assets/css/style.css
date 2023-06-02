@@ -49,10 +49,29 @@ section {
     transform: rotateY(180deg);
 }
 
-.modal {
-    display: none;
+#main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: 40vh;
+    width: 40vw;
 }
 
-#main-menu {
+/* Button styling inspired by Scoot on https: //getcssscan.com/css-buttons-examples */
+.btn {
+    background-color: #434b4b;
+    border: 1px solid #434b4b;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,
+        #434b4b 4px 4px 0 1px;
+    color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+}
+
+.modal {
     display: none;
+
 }
