@@ -35,13 +35,14 @@ section {
 
 .back {
     background: #b2b2c0;
-    transform: rotateY(180deg);
+    backface-visibility: hidden;
 }
 
 .face {
     background-color: #b2b2c0;
     text-align: center;
     padding: 5px;
+    transform: scaleX(-1);
 }
 
 .flipCard {
