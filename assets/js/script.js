@@ -19,8 +19,14 @@ buttons.forEach(button => {
 
 });
 
-
+/**
+ * Populate the select difficulty menu
+ */
 function selectDifficulty() {
+    let selectDifficultyMenu = document.getElementById("difficulty");
+    selectDifficultyMenu.classList.remove("hidden");
+    let mainMenu = document.getElementById("main-menu");
+    mainMenu.style.display = "none";
     console.log("Select Difficulty");
 }
 

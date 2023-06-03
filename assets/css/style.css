@@ -58,6 +58,12 @@ section {
     background-color: #b2b2c0;
     height: 40vh;
     width: 40vw;
+    position: relative;
+}
+
+#about,
+#instructions {
+    position: absolute;
 }
 
 /* Button styling inspired by Scoot on https: //getcssscan.com/css-buttons-examples */
@@ -80,7 +86,6 @@ section {
     background-color: #b2b2c0;
     height: 40vh;
     width: 40vw;
-    display: none;
 }
 
 .hidden {
