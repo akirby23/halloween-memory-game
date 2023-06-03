@@ -1,4 +1,12 @@
 
+let mainMenu = document.getElementById("main-menu");
+let selectDifficulty = document.getElementById("difficulty");
+let aboutSection = document.getElementById("about");
+let instructionsSection = document.getElementById("instructions");
+let buttons = document.getElementsByTagName("button");
+
+
+
 let section = document.querySelector("section");
 /**
  * Get the images
@@ -54,9 +62,3 @@ function cardGenerator() {
         });
     });
 };
-
-
-
-
-
-

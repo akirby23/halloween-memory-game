@@ -72,6 +72,16 @@ section {
 }
 
 .modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: 40vh;
+    width: 40vw;
     display: none;
+}
 
+.hidden {
+    display: none;
 }
