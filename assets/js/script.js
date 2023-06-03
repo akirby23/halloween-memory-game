@@ -105,7 +105,8 @@ function cardGenerator() {
         //Attach data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
-        section.appendChild(card);
+        let gameArea = document.getElementById("game-area");
+        gameArea.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
 
@@ -134,3 +135,4 @@ let checkCards = (e) => {
         }
     };
 };
+
