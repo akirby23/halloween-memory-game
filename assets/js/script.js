@@ -1,10 +1,25 @@
-
-let mainMenu = document.getElementById("main-menu");
-let selectDifficulty = document.getElementById("difficulty");
-let aboutSection = document.getElementById("about");
-let instructionsSection = document.getElementById("instructions");
 let buttons = document.getElementsByTagName("button");
+buttons.addEventListener("click", function (e) {
+    if ("data-modal" === "new-game") {
+        selectDifficulty();
+    } else if ("data-modal" === "about") {
+        aboutSection();
+    } else if ("data-modal" === "instructions") {
+        instructionsSection();
+    }
+});
 
+function selectDifficulty() {
+    console.log("Select Difficulty");
+}
+
+function aboutSection() {
+    console.log("about");
+}
+
+function instructionsSection() {
+    console.log("instructions");
+}
 
 let section = document.querySelector("section");
 /**
@@ -66,7 +81,6 @@ function cardGenerator() {
     });
 };
 
-cardGenerator() 
 
 /**
  * Check cards
@@ -79,10 +93,9 @@ let checkCards = (e) => {
 
     if (flippedCards.length === 2) {
         if (cardsMatch) {
-            console.log("Match!")
+            console.log("Match!");
         } else {
-            console.log("Wrong!")
+            console.log("Wrong!");
             card.classList.remove("flipped");
         }
-    }
-}
+    };
