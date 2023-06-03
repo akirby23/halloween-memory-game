@@ -20,7 +20,7 @@ buttons.forEach(button => {
 });
 
 /**
- * Populate the select difficulty menu
+ * Populate the select difficulty menu from the main menu
  */
 function selectDifficulty() {
     let selectDifficultyMenu = document.getElementById("difficulty");
@@ -30,6 +30,9 @@ function selectDifficulty() {
     console.log("Select Difficulty");
 }
 
+/**
+ * Populate the "About" window from the main menu
+ */
 function aboutSection() {
     let about = document.getElementById("about");
     about.classList.remove("hidden");
@@ -37,7 +40,13 @@ function aboutSection() {
     console.log("about");
 }
 
+/**
+ * Populate the instructions section from the main menu
+ */
 function instructionsSection() {
+    let instructions = document.getElementById("instructions");
+    instructions.classList.remove("hidden");
+    mainMenu.style.display = "none";
     console.log("instructions");
 }
 
