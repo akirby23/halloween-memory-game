@@ -1,13 +1,24 @@
-let buttons = document.getElementsByTagName("button");
-buttons.addEventListener("click", function (e) {
-    if ("data-modal" === "new-game") {
-        selectDifficulty();
-    } else if ("data-modal" === "about") {
-        aboutSection();
-    } else if ("data-modal" === "instructions") {
-        instructionsSection();
-    }
+// Select all buttons and put into an array of buttons
+let buttons = document.querySelectorAll("button");
+
+// Loop over each button in the array of buttons
+buttons.forEach(button => {
+    // Add a click event listener to the current button in the loop
+    button.addEventListener("click", function (e) {
+        // When clicked, get the data-modal from the clicked button
+        const modal = e.target.dataset.modal;
+
+        if (modal === "new-game") {
+            selectDifficulty();
+        } else if (modal === "about") {
+            aboutSection();
+        } else if (modal === "instructions") {
+            instructionsSection();
+        }
+    });
+
 });
+
 
 function selectDifficulty() {
     console.log("Select Difficulty");
@@ -99,3 +110,4 @@ let checkCards = (e) => {
             card.classList.remove("flipped");
         }
     };
+};
