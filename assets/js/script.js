@@ -1,20 +1,25 @@
 // Select all buttons and put into an array of buttons
 let buttons = document.querySelectorAll("button");
-
 // Loop over each button in the array of buttons
 buttons.forEach(button => {
     // Add a click event listener to the current button in the loop
     button.addEventListener("click", function (e) {
         // When clicked, get the data-modal from the clicked button
         const modal = e.target.dataset.modal;
-
         if (modal === "new-game") {
             selectDifficulty();
         } else if (modal === "about") {
             aboutSection();
         } else if (modal === "instructions") {
             instructionsSection();
+        } else if (modal === "easy") {
+            runGameEasy();
+        } else if (modal === "medium") {
+            runGameMedium();
+        } else if (modal === "hard") {
+            runGameHard();
         }
+
     });
 
 });
@@ -49,6 +54,7 @@ function instructionsSection() {
     mainMenu.style.display = "none";
     console.log("instructions");
 }
+
 
 let section = document.querySelector("section");
 /**
@@ -109,7 +115,6 @@ function cardGenerator() {
         });
     });
 };
-
 
 /**
  * Check cards
