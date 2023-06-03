@@ -105,10 +105,15 @@ for (const i of removeValFromIndex.reverse()) {
 //Get array of 10 images for Hard mode
 let imageArray3 = getImages();
 
-//Duplicate the images from the arrays to create image picklists og 12, 16 & 20 cards for Easy, Medium & Hard mode respectively
-let imagesPicklistEasy = [...imageArray1, ...imageArray1];
-let imagesPicklistMedium = [...imageArray2, ...imageArray2];
-let imagesPicklistHard = [...imageArray3, ...imageArray3];
+//Duplicate the images to create arrays of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
+let imagesEasy = [...imageArray1, ...imageArray1];
+let imagesMedium = [...imageArray2, ...imageArray2];
+let imagesHard = [...imageArray3, ...imageArray3];
+
+//Randomize the image arrays to create image picklists for each difficulty level
+let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
+let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
+let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
 /*
  * Generate the cards
