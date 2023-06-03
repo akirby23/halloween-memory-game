@@ -86,7 +86,7 @@ function getImages() {
     ];
 }
 
-//Get array of 12 images for Easy mode
+//Get array of 6 images for Easy mode
 let imageArray1 = getImages();
 removeValFromIndex = [6, 7, 8, 9];
 
@@ -94,7 +94,7 @@ for (const i of removeValFromIndex.reverse()) {
     imageArray1.splice(i, 1);
 }
 
-//Get array of 16 images for Medium mode
+//Get array of 8 images for Medium mode
 let imageArray2 = getImages();
 removeValFromIndex = [8, 9];
 
@@ -105,23 +105,10 @@ for (const i of removeValFromIndex.reverse()) {
 //Get array of 10 images for Hard mode
 let imageArray3 = getImages();
 
-//Duplicate the images from the arrays to create image picklists for each difficulty level
+//Duplicate the images from the arrays to create image picklists og 12, 16 & 20 cards for Easy, Medium & Hard mode respectively
 let imagesPicklistEasy = [...imageArray1, ...imageArray1];
 let imagesPicklistMedium = [...imageArray2, ...imageArray2];
 let imagesPicklistHard = [...imageArray3, ...imageArray3];
-
-console.log(imagesPicklistEasy);
-console.log(imagesPicklistMedium);
-console.log(imagesPicklistHard);
-
-/**
- * Randomize the cards
- */
-function randomize() {
-    let cardData = imagesPicklist;
-    cardData.sort(() => Math.random() - 0.5);
-    return cardData;
-}
 
 /*
  * Generate the cards
