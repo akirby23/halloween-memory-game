@@ -59,7 +59,7 @@ function instructionsSection() {
 
 function returnHome() {
     mainMenu.style.display = "block";
-    selectDifficulty.classList.add("hidden");
+    selectDifficultyMenu.classList.add("hidden");
     about.classList.add("hidden");
     instructions.classList.add("hidden");
 }
@@ -85,7 +85,27 @@ function getImages() {
         { imgSrc: "assets/images/cards/halloween-witch.png", name: "witch" },
     ];
 }
-let images = getImages();
+
+//Generate picklist of images for Easy mode
+let imagePicklistEasy = getImages();
+removeValFromIndex = [6, 7, 8, 9];
+
+for (const i of removeValFromIndex.reverse()) {
+    imagePicklistEasy.splice(i, 1);
+}
+
+//Generate picklist of images for Medium mode
+let imagePicklistMedium = getImages();
+removeValFromIndex = [8, 9];
+
+for (const i of removeValFromIndex.reverse()) {
+    imagePicklistMedium.splice(i, 1);
+}
+
+//Generate picklist of images for Hard mode
+let imagesPicklistHard = getImages();
+
+console.log(imagesPicklistHard);
 //Duplicate the images from the array
 let imagesPicklist = [...images, ...images];
 
