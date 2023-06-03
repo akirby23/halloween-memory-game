@@ -1,4 +1,7 @@
 let mainMenu = document.getElementById("main-menu");
+let selectDifficultyMenu = document.getElementById("difficulty");
+let about = document.getElementById("about");
+let instructions = document.getElementById("instructions");
 
 // Select all buttons and put into an array of buttons
 let buttons = document.querySelectorAll("button");
@@ -31,7 +34,6 @@ buttons.forEach(button => {
  * Populate the select difficulty menu from the main menu
  */
 function selectDifficulty() {
-    let selectDifficultyMenu = document.getElementById("difficulty");
     selectDifficultyMenu.classList.remove("hidden");
     mainMenu.style.display = "none";
     console.log("Select Difficulty");
@@ -41,7 +43,6 @@ function selectDifficulty() {
  * Populate the "About" window from the main menu
  */
 function aboutSection() {
-    let about = document.getElementById("about");
     about.classList.remove("hidden");
     mainMenu.style.display = "none";
     console.log("about");
@@ -51,7 +52,6 @@ function aboutSection() {
  * Populate the instructions section from the main menu
  */
 function instructionsSection() {
-    let instructions = document.getElementById("instructions");
     instructions.classList.remove("hidden");
     mainMenu.style.display = "none";
     console.log("instructions");
@@ -59,6 +59,7 @@ function instructionsSection() {
 
 function returnHome() {
     mainMenu.style.display = "block";
+    selectDifficulty.classList.add("hidden");
     about.classList.add("hidden");
     instructions.classList.add("hidden");
 }
