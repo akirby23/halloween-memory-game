@@ -1,3 +1,5 @@
+let mainMenu = document.getElementById("main-menu");
+
 // Select all buttons and put into an array of buttons
 let buttons = document.querySelectorAll("button");
 // Loop over each button in the array of buttons
@@ -31,7 +33,6 @@ buttons.forEach(button => {
 function selectDifficulty() {
     let selectDifficultyMenu = document.getElementById("difficulty");
     selectDifficultyMenu.classList.remove("hidden");
-    let mainMenu = document.getElementById("main-menu");
     mainMenu.style.display = "none";
     console.log("Select Difficulty");
 }
@@ -56,6 +57,14 @@ function instructionsSection() {
     console.log("instructions");
 }
 
+function returnHome() {
+    mainMenu.style.display = "block";
+    about.classList.add("hidden");
+    instructions.classList.add("hidden");
+}
+
+console.log(returnHome);
+
 
 let section = document.querySelector("section");
 /**
@@ -76,6 +85,7 @@ function getImages() {
     ];
 }
 let images = getImages();
+//Duplicate the images from the array
 let imagesPicklist = [...images, ...images];
 
 /**
