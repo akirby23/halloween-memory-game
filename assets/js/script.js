@@ -42,16 +42,19 @@ function randomize() {
  */
 function cardGenerator() {
     let cardData = randomize();
-    //Generate the HTML
-    cardData.forEach((item) => {
+    //Generate the cards
+    cardData.forEach((item, index) => {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
+        //Add classes to the cards
         card.classList = "card";
         face.classList = "face";
         back.classList = "back";
-        //Append images to the cards
+        //Attach images to the cards
         face.src = item.imgSrc;
+        //Attach data types to the cards
+        card.setAttribute("data-image", item.name);
         //Append cards to the section
         section.appendChild(card);
         card.appendChild(face);
@@ -59,6 +62,17 @@ function cardGenerator() {
 
         card.addEventListener("click", function (e) {
             card.classList.toggle("flipCard");
+            checkCards(e);
         });
     });
 };
+
+cardGenerator() 
+
+/**
+ * Check cards
+ */
+function checkCards(e) {
+    let clickedCard = e.target;
+
+}
