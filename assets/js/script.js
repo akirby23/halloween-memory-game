@@ -2,7 +2,7 @@
 let buttons = document.querySelectorAll("button");
 // Loop over each button in the array of buttons
 buttons.forEach(button => {
-    // Add a click event listener to the current button in the loop
+    // Add a click event listener to the current button in the loop to trigger different actions
     button.addEventListener("click", function (e) {
         // When clicked, get the data-modal from the clicked button
         const modal = e.target.dataset.modal;
@@ -18,8 +18,9 @@ buttons.forEach(button => {
             runGameMedium();
         } else if (modal === "hard") {
             runGameHard();
+        } else if (modal === "back") {
+            returnHome();
         }
-
     });
 
 });
