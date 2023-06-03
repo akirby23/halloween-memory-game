@@ -31,6 +31,9 @@ function selectDifficulty() {
 }
 
 function aboutSection() {
+    let about = document.getElementById("about");
+    about.classList.remove("hidden");
+    mainMenu.style.display = "none";
     console.log("about");
 }
 
