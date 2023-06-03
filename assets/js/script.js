@@ -6,7 +6,6 @@ let instructionsSection = document.getElementById("instructions");
 let buttons = document.getElementsByTagName("button");
 
 
-
 let section = document.querySelector("section");
 /**
  * Get the images
@@ -43,7 +42,7 @@ function randomize() {
 function cardGenerator() {
     let cardData = randomize();
     //Generate the cards
-    cardData.forEach((item, index) => {
+    cardData.forEach((item) => {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
@@ -72,7 +71,18 @@ cardGenerator()
 /**
  * Check cards
  */
-function checkCards(e) {
+let checkCards = (e) => {
     let clickedCard = e.target;
+    clickedCard.classList.add("flipped");
+    let flippedCards = document.querySelectorAll(".flipped");
+    let cardsMatch = flippedCards[0].getAttribute("data-image") === flippedCards[1].getAttribute("data-image");
 
+    if (flippedCards.length === 2) {
+        if (cardsMatch) {
+            console.log("Match!")
+        } else {
+            console.log("Wrong!")
+            card.classList.remove("flipped");
+        }
+    }
 }
