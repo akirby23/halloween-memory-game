@@ -13,11 +13,14 @@ body {
 }
 
 #game-area {
-    display: grid;
-    grid-template-columns: repeat(4, 8rem);
-    grid-template-rows: repeat(5, 8rem);
-    grid-gap: 2rem;
     perspective: 1000px;
+}
+
+.hard {
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(5, 20vh);
+    grid-gap: 30px;
 }
 
 .card {

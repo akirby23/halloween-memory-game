@@ -110,18 +110,20 @@ let imagesEasy = [...imageArray1, ...imageArray1];
 let imagesMedium = [...imageArray2, ...imageArray2];
 let imagesHard = [...imageArray3, ...imageArray3];
 
-//Randomize the image arrays to create image picklists for each difficulty level
+/**
+ * Randomize the image arrays to create image picklists for each difficulty level
+ * Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
+ */
 let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
 let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
 let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
 /*
- * Generate the cards
+ * Run the game when the user selects the difficulty "Hard"
  */
-function cardGenerator() {
-    let cardData = randomize();
+function runGameHard() {
     //Generate the cards
-    cardData.forEach((item) => {
+    imagePicklistHard.forEach((item) => {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
@@ -145,6 +147,8 @@ function cardGenerator() {
         });
     });
 };
+
+cardGenerator();
 
 /**
  * Check cards
