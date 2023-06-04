@@ -22,6 +22,7 @@ buttons.forEach(button => {
         } else if (modal === "medium") {
             runGameMedium();
         } else if (modal === "hard") {
+            selectDifficultyMenu.classList.add("hidden");
             runGameHard();
         } else if (modal === "back") {
             returnHome();
@@ -122,6 +123,8 @@ let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
  * Run the game when the user selects the difficulty "Hard"
  */
 function runGameHard() {
+    let gameArea = document.getElementById("game-area");
+    gameArea.classList.add("hard");
     //Generate the cards
     imagePicklistHard.forEach((item) => {
         let card = document.createElement("div");
@@ -136,7 +139,6 @@ function runGameHard() {
         //Attach data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
-        let gameArea = document.getElementById("game-area");
         gameArea.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
