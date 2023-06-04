@@ -121,6 +121,37 @@ let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
 let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
 /*
+ * Run the game when the user selects the difficulty "Easy"
+ */
+function runGameEasy() {
+    let gameArea = document.getElementById("game-area");
+    gameArea.classList.add("easy");
+    //Generate the cards
+    imagePicklistHard.forEach((item) => {
+        let card = document.createElement("div");
+        let face = document.createElement("img");
+        let back = document.createElement("div");
+        //Add classes to the cards
+        card.classList = "card";
+        face.classList = "face";
+        back.classList = "back";
+        //Attach images to the cards
+        face.src = item.imgSrc;
+        //Attach data types to the cards
+        card.setAttribute("data-image", item.name);
+        //Append cards to the section
+        gameArea.appendChild(card);
+        card.appendChild(face);
+        card.appendChild(back);
+
+        card.addEventListener("click", function (e) {
+            card.classList.toggle("flipCard");
+            checkCards(e);
+        });
+    });
+};
+
+/*
  * Run the game when the user selects the difficulty "Medium"
  */
 function runGameMedium() {
