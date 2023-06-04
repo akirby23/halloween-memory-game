@@ -20,6 +20,7 @@ buttons.forEach(button => {
         } else if (modal === "easy") {
             runGameEasy();
         } else if (modal === "medium") {
+            selectDifficultyMenu.classList.add("hidden");
             runGameMedium();
         } else if (modal === "hard") {
             selectDifficultyMenu.classList.add("hidden");
