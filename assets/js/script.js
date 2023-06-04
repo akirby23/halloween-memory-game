@@ -39,7 +39,6 @@ buttons.forEach(button => {
 function selectDifficulty() {
     selectDifficultyMenu.classList.remove("hidden");
     mainMenu.style.display = "none";
-    console.log("Select Difficulty");
 }
 
 /**
@@ -48,7 +47,6 @@ function selectDifficulty() {
 function aboutSection() {
     about.classList.remove("hidden");
     mainMenu.style.display = "none";
-    console.log("about");
 }
 
 /**
@@ -57,7 +55,6 @@ function aboutSection() {
 function instructionsSection() {
     instructions.classList.remove("hidden");
     mainMenu.style.display = "none";
-    console.log("instructions");
 }
 
 function returnHome() {
@@ -66,9 +63,6 @@ function returnHome() {
     about.classList.add("hidden");
     instructions.classList.add("hidden");
 }
-
-console.log(returnHome);
-
 
 let section = document.querySelector("section");
 /**
@@ -106,8 +100,6 @@ for (const i of removeValFromIndex.reverse()) {
     imageArray2.splice(i, 1);
 }
 
-console.log(imageArray2);
-
 //Get array of 10 images for Hard mode
 let imageArray3 = getImages();
 
@@ -116,7 +108,6 @@ let imagesEasy = [...imageArray1, ...imageArray1];
 let imagesMedium = [...imageArray2, ...imageArray2];
 let imagesHard = [...imageArray3, ...imageArray3];
 
-console.log(imagesMedium);
 /**
  * Randomize the image arrays to create image picklists for each difficulty level
  * Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
@@ -125,7 +116,6 @@ let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
 let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
 let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
-console.log(imagePicklistHard);
 /*
  * Run the game when the user selects the difficulty "Easy"
  */
@@ -206,7 +196,7 @@ function runGameHard() {
         //Attach images to the cards
         face.src = item.imgSrc;
         //Attach data types to the cards
-        card.setAttribute("data-image", item.name);
+        card.setAttribute("name", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
         card.appendChild(face);
@@ -222,20 +212,19 @@ function runGameHard() {
 /**
  * Check cards
  */
-let checkCards = (e) => {
-    let clickedCard = e.target;
-    clickedCard.classList.add("flipped");
+function checkCards(e) {
+    let selectedCard = e.target;
+    selectedCard.classList.add("flipped");
     let flippedCards = document.querySelectorAll(".flipped");
-    let cardsMatch = flippedCards[0].getAttribute("data-image") === flippedCards[1].getAttribute("data-image");
 
     if (flippedCards.length === 2) {
-        if (cardsMatch) {
+        if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")) {
             console.log("Match!");
         } else {
             console.log("Wrong!");
             card.classList.remove("flipped");
         }
     };
-};
+}
 
 
