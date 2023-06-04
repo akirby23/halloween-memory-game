@@ -16,6 +16,13 @@ body {
     perspective: 1000px;
 }
 
+.medium {
+    display: grid;
+    grid-template-columns: repeat(4, 20vh);
+    grid-template-rows: repeat(4, 20vh);
+    grid-gap: 30px;
+}
+
 .hard {
     display: grid;
     grid-template-columns: repeat(4, 20vh);
