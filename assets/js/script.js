@@ -150,8 +150,6 @@ function runGameHard() {
     });
 };
 
-cardGenerator();
-
 /**
  * Check cards
  */
