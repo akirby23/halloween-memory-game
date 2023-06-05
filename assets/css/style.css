@@ -86,13 +86,8 @@ h1 {
     background-color: #b2b2c0;
     height: 40vh;
     width: 40vw;
-    position: relative;
 }
 
-#about,
-#instructions {
-    position: absolute;
-}
 
 /* Button styling inspired button 50 by Scoot on https: //getcssscan.com/css-buttons-examples */
 .btn {
