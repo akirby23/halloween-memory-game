@@ -120,6 +120,14 @@ h1 {
     font-family: 'Voltaire', sans-serif;
 }
 
+#back-button {
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    box-shadow: #434b4b 4px 4px 0 0,
+        #ffffff 4px 4px 0 1px;
+    color: #434b4b;
+}
+
 .modal {
     display: flex;
     flex-direction: column;
