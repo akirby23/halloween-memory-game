@@ -52,7 +52,7 @@ resetGameButton.addEventListener("click", resetGame);
  */
 function selectDifficulty() {
     selectDifficultyMenu.classList.remove("hidden");
-    mainMenu.style.display = "none";
+    mainMenu.classList.add("hidden");
 }
 
 /**
@@ -60,7 +60,7 @@ function selectDifficulty() {
  */
 function aboutSection() {
     about.classList.remove("hidden");
-    mainMenu.style.display = "none";
+    mainMenu.classList.add("hidden");
 }
 
 /**
@@ -68,17 +68,17 @@ function aboutSection() {
  */
 function instructionsSection() {
     instructions.classList.remove("hidden");
-    mainMenu.style.display = "none";
+    mainMenu.classList.add("hidden");
 }
 
 /**
  * Go back to the main menu
  */
 function returnHome() {
-    mainMenu.style.display = "block";
     selectDifficultyMenu.classList.add("hidden");
     about.classList.add("hidden");
     instructions.classList.add("hidden");
+    mainMenu.classList.remove("hidden");
 }
 
 function resetGame() {

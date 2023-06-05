@@ -91,7 +91,7 @@ h1 {
     transform: rotateY(180deg);
 }
 
-#main-menu {
+.main-menu {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,6 +100,11 @@ h1 {
     height: 40vh;
     width: 40vw;
     border-radius: 50px;
+}
+
+.main-menu-content {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Button styling inspired button 50 by Scoot on https: //getcssscan.com/css-buttons-examples */
