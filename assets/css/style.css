@@ -9,6 +9,7 @@
 
 body {
     background-color: #d8b9ff;
+    background-image: url('assets/images/background-image/background-image.jpg');
     display: flex;
     justify-content: center;
     align-items: center;

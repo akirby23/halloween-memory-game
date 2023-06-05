@@ -40,12 +40,12 @@ buttons.forEach(button => {
             runGame = true;
         } else if (modal === "back") {
             returnHome();
+        } else if (resetGameButton) {
+            resetGame();
         }
     });
 
 });
-
-resetGameButton.addEventListener("click", resetGame);
 
 /**
  * Populate the select difficulty menu from the main menu
