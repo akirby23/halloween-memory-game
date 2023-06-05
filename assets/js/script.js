@@ -68,6 +68,10 @@ function returnHome() {
     instructions.classList.add("hidden");
 }
 
+function resetGame() {
+
+}
+
 /**
  * Get the images
  */
@@ -224,11 +228,13 @@ function checkCards(e) {
     if (flippedCards.length === 2) {
         if (cardsMatch) {
             console.log("Match!");
+            ++numberOfMoves;
             flippedCards.forEach(function (card) {
                 card.classList.add("match");
                 card.classList.remove("flipped");
             });
         } else {
+            ++numberOfMoves;
             flippedCards.forEach(function (card) {
                 card.classList.remove("flipped");
                 setTimeout(() => {
