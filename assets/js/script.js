@@ -172,8 +172,8 @@ function runGameMedium() {
         card.appendChild(back);
 
         card.addEventListener("click", function (e) {
-            card.classList.toggle("flipCard");
-            checkCards(e);
+        card.classList.toggle("flipCard");
+        checkCards(e);
         });
     });
 };
@@ -204,7 +204,6 @@ function runGameHard() {
 
         card.addEventListener("click", function (e) {
             card.classList.toggle("flipCard");
-            checkCards(e);
         });
     });
 };
@@ -216,14 +215,19 @@ function checkCards(e) {
     let selectedCard = e.target;
     selectedCard.classList.add("flipped");
     let flippedCards = document.querySelectorAll(".flipped");
+    let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image
 
     if (flippedCards.length === 2) {
-        if (flippedCards[0].dataset.image === flippedCards[1].dataset.image) {
+        if (cardsMatch) {
             console.log("Match!");
-            card.classList.add("match")
+
         } else {
-            console.log("Wrong!");
-            card.classList.remove("flipped");
+            flippedCards.forEach(function(card) {
+                card.classList.remove("flipped");
+                setTimeout(() => {
+                    card.classList.remove("flipCard");
+                }, 1000);
+            })
         }
     };
 }
