@@ -123,7 +123,7 @@ function runGameEasy() {
     let gameArea = document.getElementById("game-area");
     gameArea.classList.add("easy");
     //Generate the cards
-    imagePicklistHard.forEach((item) => {
+    imagePicklistEasy.forEach((item) => {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
@@ -154,7 +154,7 @@ function runGameMedium() {
     let gameArea = document.getElementById("game-area");
     gameArea.classList.add("medium");
     //Generate the cards
-    imagePicklistHard.forEach((item) => {
+    imagePicklistMedium.forEach((item) => {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
