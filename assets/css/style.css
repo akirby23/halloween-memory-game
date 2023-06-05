@@ -24,6 +24,11 @@ h1 {
 }
 
 #game-area {
+    display: flex;
+    flex-direction: row;
+}
+
+#game-area-center {
     perspective: 1000px;
 }
 
