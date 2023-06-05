@@ -126,6 +126,11 @@ h1 {
     border-radius: 50px;
 }
 
+.modal-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .hidden {
     display: none;
 }

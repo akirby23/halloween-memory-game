@@ -9,6 +9,7 @@ const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
 const card = document.getElementsByClassName("card");
 
+
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
 const exitGameButton = document.getElementById("exit-game");
@@ -44,9 +45,7 @@ buttons.forEach(button => {
 
 });
 
-resetGameButton.addEventListener("click", function (e) {
-    numberOfMoves = 0;
-});
+resetGameButton.addEventListener("click", resetGame);
 
 /**
  * Populate the select difficulty menu from the main menu
