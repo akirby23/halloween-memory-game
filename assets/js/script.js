@@ -4,6 +4,8 @@ const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
 const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
+const gameArea = document.getElementById("game-area-center");
+const gameAreaRight = document.getElementById("game-area-right");
 
 // Select all buttons and put into an array of buttons
 const buttons = document.querySelectorAll("button");
@@ -122,8 +124,8 @@ let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
  * Run the game when the user selects the difficulty "Easy"
  */
 function runGameEasy() {
-    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("easy");
+    gameAreaRight.classList.remove("hidden");
     //Generate the cards
     imagePicklistEasy.forEach((item) => {
         let card = document.createElement("div");
@@ -153,8 +155,8 @@ function runGameEasy() {
  * Run the game when the user selects the difficulty "Medium"
  */
 function runGameMedium() {
-    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("medium");
+    gameAreaRight.classList.remove("hidden");
     //Generate the cards
     imagePicklistMedium.forEach((item) => {
         let card = document.createElement("div");
@@ -184,8 +186,8 @@ function runGameMedium() {
  * Run the game when the user selects the difficulty "Hard"
  */
 function runGameHard() {
-    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("hard");
+    gameAreaRight.classList.remove("hidden");
     //Generate the cards
     imagePicklistHard.forEach((item) => {
         let card = document.createElement("div");
