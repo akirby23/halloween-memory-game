@@ -18,6 +18,9 @@ body {
 
 h1 {
     font-family: 'Creepster', cursive;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    margin: 50px;
 }
 
 #game-area {
@@ -101,6 +104,7 @@ h1 {
     color: #ffffff;
     padding: 5px;
     margin: 5px;
+    font-family: 'Voltaire', sans-serif;
 }
 
 .modal {
