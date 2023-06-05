@@ -122,7 +122,7 @@ let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
  * Run the game when the user selects the difficulty "Easy"
  */
 function runGameEasy() {
-    let gameArea = document.getElementById("game-area");
+    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("easy");
     //Generate the cards
     imagePicklistEasy.forEach((item) => {
@@ -153,7 +153,7 @@ function runGameEasy() {
  * Run the game when the user selects the difficulty "Medium"
  */
 function runGameMedium() {
-    let gameArea = document.getElementById("game-area");
+    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("medium");
     //Generate the cards
     imagePicklistMedium.forEach((item) => {
@@ -184,7 +184,7 @@ function runGameMedium() {
  * Run the game when the user selects the difficulty "Hard"
  */
 function runGameHard() {
-    let gameArea = document.getElementById("game-area");
+    let gameArea = document.getElementById("game-area-center");
     gameArea.classList.add("hard");
     //Generate the cards
     imagePicklistHard.forEach((item) => {
