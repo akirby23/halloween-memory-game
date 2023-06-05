@@ -7,6 +7,7 @@ const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
+const card = document.getElementsByClassName("card");
 
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
@@ -43,6 +44,10 @@ buttons.forEach(button => {
 
 });
 
+resetGameButton.addEventListener("click", function (e) {
+    numberOfMoves = 0;
+});
+
 /**
  * Populate the select difficulty menu from the main menu
  */
@@ -67,6 +72,9 @@ function instructionsSection() {
     mainMenu.style.display = "none";
 }
 
+/**
+ * Go back to the main menu
+ */
 function returnHome() {
     mainMenu.style.display = "block";
     selectDifficultyMenu.classList.add("hidden");
@@ -79,7 +87,7 @@ function resetGame() {
 }
 
 /**
- * Get the images
+ * Get all of the images
  */
 function getImages() {
     return [
@@ -103,7 +111,6 @@ removeValFromIndex = [6, 7, 8, 9];
 for (const i of removeValFromIndex.reverse()) {
     imageArray1.splice(i, 1);
 }
-
 
 //Get array of 8 images for Medium mode
 let imageArray2 = getImages();
@@ -230,7 +237,7 @@ function runGameHard() {
 };
 
 /**
- * Check cards
+ * Check cards for matches
  */
 function checkCards(e) {
     let selectedCard = e.target;
