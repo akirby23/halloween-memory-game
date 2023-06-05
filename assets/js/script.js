@@ -1,3 +1,5 @@
+let numberOfMoves = 0;
+
 let mainMenu = document.getElementById("main-menu");
 let selectDifficultyMenu = document.getElementById("difficulty");
 let about = document.getElementById("about");
@@ -223,8 +225,7 @@ function checkCards(e) {
 flippedCards.forEach(function(card) {
     card.classList.add("match");
     card.classList.remove("flipped");
-})
-        } else {
+})} else {
             flippedCards.forEach(function(card) {
                 card.classList.remove("flipped");
                 setTimeout(() => {
