@@ -1,12 +1,12 @@
 let numberOfMoves = 0;
 
-let mainMenu = document.getElementById("main-menu");
-let selectDifficultyMenu = document.getElementById("difficulty");
-let about = document.getElementById("about");
-let instructions = document.getElementById("instructions");
+const mainMenu = document.getElementById("main-menu");
+const selectDifficultyMenu = document.getElementById("difficulty");
+const about = document.getElementById("about");
+const instructions = document.getElementById("instructions");
 
 // Select all buttons and put into an array of buttons
-let buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button");
 // Loop over each button in the array of buttons
 buttons.forEach(button => {
     // Add a click event listener to the current button in the loop to trigger different actions
@@ -174,8 +174,8 @@ function runGameMedium() {
         card.appendChild(back);
 
         card.addEventListener("click", function (e) {
-        card.classList.toggle("flipCard");
-        checkCards(e);
+            card.classList.toggle("flipCard");
+            checkCards(e);
         });
     });
 };
@@ -217,21 +217,22 @@ function checkCards(e) {
     let selectedCard = e.target;
     selectedCard.classList.add("flipped");
     let flippedCards = document.querySelectorAll(".flipped");
-    let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image
+    let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image;
 
     if (flippedCards.length === 2) {
         if (cardsMatch) {
             console.log("Match!");
-flippedCards.forEach(function(card) {
-    card.classList.add("match");
-    card.classList.remove("flipped");
-})} else {
-            flippedCards.forEach(function(card) {
+            flippedCards.forEach(function (card) {
+                card.classList.add("match");
+                card.classList.remove("flipped");
+            });
+        } else {
+            flippedCards.forEach(function (card) {
                 card.classList.remove("flipped");
                 setTimeout(() => {
                     card.classList.remove("flipCard");
                 }, 1000);
-            })
+            });
         }
     };
 }
