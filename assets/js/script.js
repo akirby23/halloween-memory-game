@@ -1,4 +1,5 @@
 let numberOfMoves = 0;
+let runGame = false;
 
 const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
@@ -7,8 +8,10 @@ const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
 
-// Select all buttons and put into an array of buttons
 const buttons = document.querySelectorAll("button");
+const resetGameButton = document.getElementById("reset-game");
+const exitGameButton = document.getElementById("exit-game");
+
 // Loop over each button in the array of buttons
 buttons.forEach(button => {
     // Add a click event listener to the current button in the loop to trigger different actions
@@ -24,12 +27,15 @@ buttons.forEach(button => {
         } else if (modal === "easy") {
             selectDifficultyMenu.classList.add("hidden");
             runGameEasy();
+            runGame = true;
         } else if (modal === "medium") {
             selectDifficultyMenu.classList.add("hidden");
             runGameMedium();
+            runGame = true;
         } else if (modal === "hard") {
             selectDifficultyMenu.classList.add("hidden");
             runGameHard();
+            runGame = true;
         } else if (modal === "back") {
             returnHome();
         }
@@ -69,7 +75,7 @@ function returnHome() {
 }
 
 function resetGame() {
-
+    numberOfMoves = 0;
 }
 
 /**
