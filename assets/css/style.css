@@ -1,3 +1,6 @@
+/* Import Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Voltaire&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +13,11 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: 'Voltaire', sans-serif;
+}
+
+h1 {
+    font-family: 'Creepster', cursive;
 }
 
 #game-area {
