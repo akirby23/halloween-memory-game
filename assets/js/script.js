@@ -83,8 +83,6 @@ function getImages() {
     ];
 }
 
-
-
 //Get array of 6 images for Easy mode
 let imageArray1 = getImages();
 removeValFromIndex = [6, 7, 8, 9];
@@ -220,15 +218,13 @@ function checkCards(e) {
     let flippedCards = document.querySelectorAll(".flipped");
 
     if (flippedCards.length === 2) {
-        if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")) {
+        if (flippedCards[0].dataset.image === flippedCards[1].dataset.image) {
             console.log("Match!");
             card.classList.add("match")
         } else {
             console.log("Wrong!");
             card.classList.remove("flipped");
         }
-    console.log(flippedCards[0])
-    console.log(flippedCards[1])
     };
 }
 
