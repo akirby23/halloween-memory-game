@@ -53,6 +53,8 @@ resetGameButton.addEventListener("click", resetGame);
 function selectDifficulty() {
     selectDifficultyMenu.classList.remove("hidden");
     mainMenu.classList.add("hidden");
+    about.classList.add("hidden");
+    instructions.classList.add("hidden");
 }
 
 /**
