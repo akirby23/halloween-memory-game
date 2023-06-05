@@ -68,7 +68,6 @@ function returnHome() {
     instructions.classList.add("hidden");
 }
 
-let section = document.querySelector("section");
 /**
  * Get the images
  */
@@ -208,6 +207,7 @@ function runGameHard() {
 
         card.addEventListener("click", function (e) {
             card.classList.toggle("flipCard");
+            checkCards(e);
         });
     });
 };
