@@ -108,3 +108,7 @@ body {
 .hidden {
     display: none;
 }
+
+.match {
+    pointer-events: none;
+}

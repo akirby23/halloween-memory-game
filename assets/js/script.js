@@ -83,6 +83,8 @@ function getImages() {
     ];
 }
 
+
+
 //Get array of 6 images for Easy mode
 let imageArray1 = getImages();
 removeValFromIndex = [6, 7, 8, 9];
@@ -133,7 +135,7 @@ function runGameEasy() {
         back.classList = "back";
         //Attach images to the cards
         face.src = item.imgSrc;
-        //Attach data types to the cards
+        //Assign data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
@@ -164,7 +166,7 @@ function runGameMedium() {
         back.classList = "back";
         //Attach images to the cards
         face.src = item.imgSrc;
-        //Attach data types to the cards
+        //Assign data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
@@ -195,8 +197,8 @@ function runGameHard() {
         back.classList = "back";
         //Attach images to the cards
         face.src = item.imgSrc;
-        //Attach data types to the cards
-        card.setAttribute("name", item.name);
+        //Assign data types to the cards
+        card.setAttribute("data-image", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
         card.appendChild(face);
@@ -220,11 +222,16 @@ function checkCards(e) {
     if (flippedCards.length === 2) {
         if (flippedCards[0].getAttribute("name") === flippedCards[1].getAttribute("name")) {
             console.log("Match!");
+            card.classList.add("match")
         } else {
             console.log("Wrong!");
             card.classList.remove("flipped");
         }
+    console.log(flippedCards[0])
+    console.log(flippedCards[1])
     };
 }
+
+
 
 
