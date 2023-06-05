@@ -123,6 +123,13 @@ let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
 let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
 let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
+/**
+ * Increase number of moves by 1 each time the player selects 2 cards
+ */
+function incrementMoves() {
+    document.getElementById("moves").innerText = ++numberOfMoves;
+}
+
 /*
  * Run the game when the user selects the difficulty "Easy"
  */
@@ -228,13 +235,13 @@ function checkCards(e) {
     if (flippedCards.length === 2) {
         if (cardsMatch) {
             console.log("Match!");
-            ++numberOfMoves;
+            incrementMoves();
             flippedCards.forEach(function (card) {
                 card.classList.add("match");
                 card.classList.remove("flipped");
             });
         } else {
-            ++numberOfMoves;
+            incrementMoves();
             flippedCards.forEach(function (card) {
                 card.classList.remove("flipped");
                 setTimeout(() => {
