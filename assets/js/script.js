@@ -41,7 +41,11 @@ buttons.forEach(function (button) {
             runGame = true;
         } else if (modal === "back") {
             returnHome();
-        };
+        } else if (resetGameButton) {
+            resetGame();
+        } else if (exitGameButton) {
+
+        }
     });
 
 });
@@ -252,9 +256,13 @@ function checkCards(e) {
                 card.classList.add("match");
                 card.classList.remove("flipped");
                 let matchedCards = document.querySelectorAll(".match");
-                if (matchedCards.length === 12) {
-
-                };
+                if (matchedCards.length === 20) {
+                    console.log("Win!");
+                } else if (matchedCards.length === 16) {
+                    console.log("Win!");
+                } else if (matchedCards.length === 12) {
+                    console.log("Win!");
+                }
             });
         } else {
             incrementMoves();
