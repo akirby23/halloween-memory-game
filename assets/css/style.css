@@ -1,6 +1,7 @@
 /* Import Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Voltaire&display=swap');
 
+/* Remove default browser styling */
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +10,7 @@
 
 body {
     background-color: #d8b9ff;
-    background-image: url('assets/images/background-image/background-image.jpg');
+    background-image: url('assets/images/background/background-image.jpg');
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +25,71 @@ h1 {
     margin: 50px;
 }
 
+/* Main menu styling */
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 50px;
+}
+
+.main-menu-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Button styling - inspired button 50 by Scoot on https: //getcssscan.com/css-buttons-examples */
+.btn {
+    background-color: #434b4b;
+    border: 1px solid #434b4b;
+    border-radius: 4px;
+    box-shadow: #fff 4px 4px 0 0,
+        #434b4b 4px 4px 0 1px;
+    color: #ffffff;
+    padding: 5px;
+    margin: 5px;
+    font-family: 'Voltaire', sans-serif;
+}
+
+#back-button {
+    background-color: #ffffff;
+    border: 1px solid #fff;
+    box-shadow: #434b4b 4px 4px 0 0,
+        #ffffff 4px 4px 0 1px;
+    color: #434b4b;
+}
+
+/* Modal styling */
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 50px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 25px;
+}
+
+/* Game area styling */
 #game-area {
     display: flex;
     flex-direction: row;
+}
+
+#game-area-center {
+    perspective: 1000px;
 }
 
 .right {
@@ -37,10 +100,7 @@ h1 {
     padding: 1rem;
 }
 
-#game-area-center {
-    perspective: 1000px;
-}
-
+/* Sizes the board when the user selects difficulty level "Easy" */
 .easy {
     display: grid;
     grid-template-columns: repeat(4, 20vh);
@@ -48,6 +108,7 @@ h1 {
     grid-gap: 30px;
 }
 
+/* Sizes the board when the user selects difficulty level "Medium" */
 .medium {
     display: grid;
     grid-template-columns: repeat(4, 20vh);
@@ -55,6 +116,7 @@ h1 {
     grid-gap: 30px;
 }
 
+/* Sizes the board when the user selects difficulty level "Hard" */
 .hard {
     display: grid;
     grid-template-columns: repeat(5, 20vh);
@@ -62,6 +124,7 @@ h1 {
     grid-gap: 30px;
 }
 
+/* Card styling */
 .card {
     transform-style: preserve-3d;
     transition: all 0.8s ease;
@@ -88,69 +151,17 @@ h1 {
     transform: scaleX(-1);
 }
 
+/* Flip the cards */
 .flipCard {
     transform: rotateY(180deg);
 }
 
-.main-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #b2b2c0;
-    height: 40vh;
-    width: 40vw;
-    border-radius: 50px;
-}
-
-.main-menu-content {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Button styling inspired button 50 by Scoot on https: //getcssscan.com/css-buttons-examples */
-.btn {
-    background-color: #434b4b;
-    border: 1px solid #434b4b;
-    border-radius: 4px;
-    box-shadow: #fff 4px 4px 0 0,
-        #434b4b 4px 4px 0 1px;
-    color: #ffffff;
-    padding: 5px;
-    margin: 5px;
-    font-family: 'Voltaire', sans-serif;
-}
-
-#back-button {
-    background-color: #ffffff;
-    border: 1px solid #fff;
-    box-shadow: #434b4b 4px 4px 0 0,
-        #ffffff 4px 4px 0 1px;
-    color: #434b4b;
-}
-
-.modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #b2b2c0;
-    height: 40vh;
-    width: 40vw;
-    border-radius: 50px;
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    line-height: 25px;
-}
-
+/* Hide elements */
 .hidden {
     display: none;
 }
 
+/* Renders the element unclickable */
 .match {
     pointer-events: none;
 }
