@@ -41,14 +41,19 @@ buttons.forEach(function (button) {
             runGame = true;
         } else if (modal === "back") {
             returnHome();
-        } else if (resetGameButton) {
-            resetGame();
-        } else if (exitGameButton) {
-
         }
     });
 
 });
+
+resetGameButton.addEventListener("click", function (e) {
+    resetGame();
+});
+
+exitGameButton.addEventListener("click", function (e) {
+    console.log("Another hello");
+});
+
 
 /**
  * Populate the select difficulty menu from the main menu
