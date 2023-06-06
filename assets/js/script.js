@@ -252,34 +252,35 @@ function checkCards(e) {
     let selectedCard = e.target;
     selectedCard.classList.add("flipped");
     let flippedCards = document.querySelectorAll(".flipped");
-    let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image;
+    if (typeof flippedCards[1] !== 'undefined') {
+        let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image;
 
-    if (flippedCards.length === 2) {
-        if (cardsMatch) {
-            console.log("Match!");
-            incrementMoves();
-            flippedCards.forEach(function (card) {
-                card.classList.add("match");
-                card.classList.remove("flipped");
-                let matchedCards = document.querySelectorAll(".match");
-                if (matchedCards.length === 20) {
-                    console.log("Win!");
-                } else if (matchedCards.length === 16) {
-                    console.log("Win!");
-                } else if (matchedCards.length === 12) {
-                    console.log("Win!");
-                }
-            });
-        } else {
-            incrementMoves();
-            flippedCards.forEach(function (card) {
-                card.classList.remove("flipped");
-                setTimeout(function () {
-                    card.classList.remove("flipCard");
-                }, 1000);
-            });
+        if (flippedCards.length === 2) {
+            if (cardsMatch) {
+                incrementMoves();
+                flippedCards.forEach(function (card) {
+                    card.classList.add("match");
+                    card.classList.remove("flipped");
+                    let matchedCards = document.querySelectorAll(".match");
+                    if (matchedCards.length === 20) {
+                        console.log("Win!");
+                    } else if (matchedCards.length === 16) {
+                        console.log("Win!");
+                    } else if (matchedCards.length === 12) {
+                        console.log("Win!");
+                    }
+                });
+            } else {
+                incrementMoves();
+                flippedCards.forEach(function (card) {
+                    card.classList.remove("flipped");
+                    setTimeout(function () {
+                        card.classList.remove("flipCard");
+                    }, 1000);
+                });
+            };
         };
-    };
+    }
 };
 
 
