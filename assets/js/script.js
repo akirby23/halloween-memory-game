@@ -2,14 +2,12 @@ let numberOfMoves = 0;
 let runGame = false;
 let card = document.getElementsByClassName("card");
 
-
 const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
 const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
-
 
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
@@ -51,7 +49,7 @@ resetGameButton.addEventListener("click", function (e) {
 });
 
 exitGameButton.addEventListener("click", function (e) {
-
+    returnHome();
 });
 
 
