@@ -1,5 +1,7 @@
 let numberOfMoves = 0;
 let runGame = false;
+let card = document.getElementsByClassName("card");
+
 
 const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
@@ -7,7 +9,6 @@ const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
-const card = document.getElementsByClassName("card");
 
 
 const buttons = document.querySelectorAll("button");
@@ -15,7 +16,7 @@ const resetGameButton = document.getElementById("reset-game");
 const exitGameButton = document.getElementById("exit-game");
 
 // Loop over each button in the array of buttons
-buttons.forEach(button => {
+buttons.forEach(function (button) {
     // Add a click event listener to the current button in the loop to trigger different actions
     button.addEventListener("click", function (e) {
         // When clicked, get the data-modal from the clicked button
@@ -40,9 +41,7 @@ buttons.forEach(button => {
             runGame = true;
         } else if (modal === "back") {
             returnHome();
-        } else if (resetGameButton) {
-            resetGame();
-        }
+        };
     });
 
 });
@@ -124,18 +123,20 @@ for (const i of removeValFromIndex.reverse()) {
 //Get array of 10 images for Hard mode
 let imageArray3 = getImages();
 
-//Duplicate the images to create arrays of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
-let imagesEasy = [...imageArray1, ...imageArray1];
-let imagesMedium = [...imageArray2, ...imageArray2];
-let imagesHard = [...imageArray3, ...imageArray3];
+//Duplicate the images to create picklists of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
+const imagePicklistEasy = [...imageArray1, ...imageArray1];
+const imagePicklistMedium = [...imageArray2, ...imageArray2];
+const imagePicklistHard = [...imageArray3, ...imageArray3];
 
 /**
- * Randomize the image arrays to create image picklists for each difficulty level
+ * Randomize the image picklists
  * Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
  */
-let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
-let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
-let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
+function randomizeImages() {
+    imagePicklistEasy.sort(() => Math.random() - 0.5);
+    imagePicklistMedium.sort(() => Math.random() - 0.5);
+    imagePicklistHard.sort(() => Math.random() - 0.5);
+}
 
 /**
  * Increase number of moves by 1 each time the player selects 2 cards
@@ -254,6 +255,8 @@ function checkCards(e) {
                 card.classList.add("match");
                 card.classList.remove("flipped");
             });
+            let matchedCards = document.getElementsByClassName("match");
+            console.log(matchedCards);
         } else {
             incrementMoves();
             flippedCards.forEach(function (card) {
@@ -262,9 +265,10 @@ function checkCards(e) {
                     card.classList.remove("flipCard");
                 }, 1000);
             });
-        }
+        };
     };
-}
+};
+
 
 
 
