@@ -123,20 +123,17 @@ for (const i of removeValFromIndex.reverse()) {
 //Get array of 10 images for Hard mode
 let imageArray3 = getImages();
 
-//Duplicate the images to create picklists of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
-const imagePicklistEasy = [...imageArray1, ...imageArray1];
-const imagePicklistMedium = [...imageArray2, ...imageArray2];
-const imagePicklistHard = [...imageArray3, ...imageArray3];
+//Duplicate the images to create arrays of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
+const imagesEasy = [...imageArray1, ...imageArray1];
+const imagesMedium = [...imageArray2, ...imageArray2];
+const imagesHard = [...imageArray3, ...imageArray3];
 
-/**
- * Randomize the image picklists
- * Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array
- */
-function randomizeImages() {
-    imagePicklistEasy.sort(() => Math.random() - 0.5);
-    imagePicklistMedium.sort(() => Math.random() - 0.5);
-    imagePicklistHard.sort(() => Math.random() - 0.5);
-}
+/* Randomize the image arrays to creat picklists for each difficulty level
+ Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
+
+let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
+let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
+let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
 
 /**
  * Increase number of moves by 1 each time the player selects 2 cards
@@ -254,20 +251,23 @@ function checkCards(e) {
             flippedCards.forEach(function (card) {
                 card.classList.add("match");
                 card.classList.remove("flipped");
+                let matchedCards = document.querySelectorAll(".match");
+                if (matchedCards.length === 12) {
+
+                };
             });
-            let matchedCards = document.getElementsByClassName("match");
-            console.log(matchedCards);
         } else {
             incrementMoves();
             flippedCards.forEach(function (card) {
                 card.classList.remove("flipped");
-                setTimeout(() => {
+                setTimeout(function () {
                     card.classList.remove("flipCard");
                 }, 1000);
             });
         };
     };
 };
+
 
 
 
