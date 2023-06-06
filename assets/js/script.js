@@ -51,7 +51,7 @@ resetGameButton.addEventListener("click", function (e) {
 });
 
 exitGameButton.addEventListener("click", function (e) {
-    console.log("Another hello");
+
 });
 
 
@@ -93,6 +93,7 @@ function returnHome() {
 
 function resetGame() {
     numberOfMoves = 0;
+    document.getElementById("moves").innerText = numberOfMoves;
 }
 
 /**
