@@ -86,6 +86,7 @@ function returnHome() {
     about.classList.add("hidden");
     instructions.classList.add("hidden");
     mainMenu.classList.remove("hidden");
+    gameArea.innerHTML = "";
 }
 
 /**
@@ -113,7 +114,6 @@ function confirmExit() {
 function resetGame() {
     numberOfMoves = 0;
     document.getElementById("moves").innerText = numberOfMoves;
-    gameArea.innerHTML = "";
     gameArea.removeAttribute("class");
     gameAreaRight.classList.add("hidden");
     let cards = document.querySelectorAll(".card");
