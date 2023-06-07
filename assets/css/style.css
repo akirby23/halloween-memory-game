@@ -163,6 +163,11 @@ h1 {
     display: none;
 }
 
+/* Renders the flipped card unclickable */
+.flipped {
+    pointer-events: none;
+}
+
 /* Renders the element unclickable */
 .match {
     pointer-events: none;
