@@ -9,6 +9,7 @@
 }
 
 body {
+    color: #09070B;
     background-color: #d4bcf2;
     background-image: url('../images/background/background-image.png');
     background-repeat: no-repeat;
@@ -26,6 +27,14 @@ h1 {
     font-size: 4rem;
     letter-spacing: 2px;
     margin: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Main menu styling */
