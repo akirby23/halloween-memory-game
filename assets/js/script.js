@@ -56,8 +56,7 @@ playAgainButton.addEventListener("click", function (e) {
 });
 
 winBackButton.addEventListener("click", function (e) {
-    resetGame();
-    returnHome();
+    exitGame();
 });
 
 
