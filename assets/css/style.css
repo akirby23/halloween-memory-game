@@ -11,6 +11,9 @@
 body {
     background-color: #d8b9ff;
     background-image: url('../images/background/background-image.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,6 +95,19 @@ h1 {
 
 #game-area-center {
     perspective: 1000px;
+}
+
+#game-area-right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: solid 1px;
 }
 
 .right {
