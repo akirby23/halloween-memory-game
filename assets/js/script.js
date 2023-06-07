@@ -49,7 +49,7 @@ resetGameButton.addEventListener("click", function (e) {
 });
 
 exitGameButton.addEventListener("click", function (e) {
-    returnHome();
+    confirmExit();
 });
 
 
@@ -87,12 +87,28 @@ function returnHome() {
     about.classList.add("hidden");
     instructions.classList.add("hidden");
     mainMenu.classList.remove("hidden");
+    gameArea.innerHTML = "";
 }
 
+/**
+ * Prompts the user to confirm their choice to reset the game. 
+ * The cards will be flipped back down & reshuffled, and the moves counter will revert back to 0. 
+ */
 function confirmReset() {
     let text = "Are you sure you want to reset the game?\nYou will lose your progress until now.";
     if (confirm(text) === true) {
         resetGame();
+    }
+}
+
+/**
+ * Prompts the user to confirm their choice to exit the game.
+ * User will be redirected to the main menu if they confirm their choice.
+ */
+function confirmExit() {
+    let text = "Are you sure you want to exit the game?\nYou will lose your progress until now & will be redirected to the main menu.";
+    if (confirm(text) === true) {
+        returnHome();
     }
 }
 
