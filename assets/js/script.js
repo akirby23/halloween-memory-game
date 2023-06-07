@@ -1,6 +1,5 @@
 let numberOfMoves = 0;
 let runGame = false;
-let card = document.getElementsByClassName("card");
 
 const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
@@ -88,6 +87,9 @@ function returnHome() {
     instructions.classList.add("hidden");
     mainMenu.classList.remove("hidden");
     gameArea.innerHTML = "";
+    gameArea.removeAttribute("class");
+    gameAreaRight.classList.add("hidden");
+
 }
 
 /**
@@ -112,11 +114,18 @@ function confirmExit() {
     }
 }
 
-
 function resetGame() {
     numberOfMoves = 0;
     document.getElementById("moves").innerText = numberOfMoves;
-    runGameEasy();
+    let cards = document.querySelectorAll(".card");
+    let cardsLength = cards.length;
+    if (cardsLength === 20) {
+        runGameHard();
+    } else if (cardsLength === 16) {
+        runGameMedium();
+    } else if (cardsLength === 12) {
+        runGameEasy();
+    }
 }
 
 /**
@@ -271,6 +280,9 @@ function runGameHard() {
     });
 };
 
+let card = document.querySelectorAll(".card");
+console.log(card);
+
 /**
  * Check cards for matches
  */
@@ -280,7 +292,6 @@ function checkCards(e) {
     let flippedCards = document.querySelectorAll(".flipped");
     if (typeof flippedCards[1] !== 'undefined') {
         let cardsMatch = flippedCards[0].dataset.image === flippedCards[1].dataset.image;
-
         if (flippedCards.length === 2) {
             if (cardsMatch) {
                 incrementMoves();
@@ -288,14 +299,14 @@ function checkCards(e) {
                     card.classList.add("match");
                     card.classList.remove("flipped");
                     let matchedCards = document.querySelectorAll(".match");
-                    if (matchedCards.length === 20) {
-                        console.log("Win!");
-                    } else if (matchedCards.length === 16) {
-                        console.log("Win!");
-                    } else if (matchedCards.length === 12) {
+                    let matchedCardsLength = matchedCards.length;
+                    let cards = document.querySelectorAll(".card");
+                    let cardsLength = cards.length;
+                    if (cardsLength === matchedCardsLength) {
                         console.log("Win!");
                     }
                 });
+
             } else {
                 incrementMoves();
                 flippedCards.forEach(function (card) {
@@ -308,6 +319,8 @@ function checkCards(e) {
         };
     }
 };
+
+
 
 
 
