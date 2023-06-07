@@ -92,6 +92,7 @@ function returnHome() {
 function resetGame() {
     numberOfMoves = 0;
     document.getElementById("moves").innerText = numberOfMoves;
+    runGameEasy();
 }
 
 /**
@@ -154,6 +155,7 @@ function incrementMoves() {
  * Run the game when the user selects the difficulty "Easy"
  */
 function runGameEasy() {
+    gameArea.innerHTML = '';
     gameArea.classList.add("easy");
     gameAreaRight.classList.remove("hidden");
     //Generate the cards
@@ -185,6 +187,7 @@ function runGameEasy() {
  * Run the game when the user selects the difficulty "Medium"
  */
 function runGameMedium() {
+    gameArea.innerHTML = '';
     gameArea.classList.add("medium");
     gameAreaRight.classList.remove("hidden");
     //Generate the cards
@@ -216,6 +219,7 @@ function runGameMedium() {
  * Run the game when the user selects the difficulty "Hard"
  */
 function runGameHard() {
+    gameArea.innerHTML = '';
     gameArea.classList.add("hard");
     gameAreaRight.classList.remove("hidden");
     //Generate the cards
