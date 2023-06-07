@@ -86,10 +86,6 @@ function returnHome() {
     about.classList.add("hidden");
     instructions.classList.add("hidden");
     mainMenu.classList.remove("hidden");
-    gameArea.innerHTML = "";
-    gameArea.removeAttribute("class");
-    gameAreaRight.classList.add("hidden");
-
 }
 
 /**
@@ -110,13 +106,16 @@ function confirmReset() {
 function confirmExit() {
     let text = "Are you sure you want to exit the game?\nYou will lose your progress until now & will be redirected to the main menu.";
     if (confirm(text) === true) {
-        returnHome();
+        exitGame();
     }
 }
 
 function resetGame() {
     numberOfMoves = 0;
     document.getElementById("moves").innerText = numberOfMoves;
+    gameArea.innerHTML = "";
+    gameArea.removeAttribute("class");
+    gameAreaRight.classList.add("hidden");
     let cards = document.querySelectorAll(".card");
     let cardsLength = cards.length;
     if (cardsLength === 20) {
@@ -126,6 +125,11 @@ function resetGame() {
     } else if (cardsLength === 12) {
         runGameEasy();
     }
+}
+
+function exitGame() {
+    returnHome();
+    resetGame();
 }
 
 /**
