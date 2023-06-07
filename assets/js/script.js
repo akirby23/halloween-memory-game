@@ -11,6 +11,7 @@ const winGameModal = document.getElementById("win-game-modal");
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
 const exitGameButton = document.getElementById("exit-game");
+const playAgainButton = document.getElementById("play-again");
 const winBackButton = document.getElementById("win-back-button");
 
 // Loop over each button in the array of buttons
@@ -47,6 +48,10 @@ resetGameButton.addEventListener("click", function (e) {
 
 exitGameButton.addEventListener("click", function (e) {
     confirmExit();
+});
+
+playAgainButton.addEventListener("click", function (e) {
+    resetGame();
 });
 
 winBackButton.addEventListener("click", function (e) {
@@ -120,6 +125,7 @@ function resetGame() {
     document.getElementById("moves").innerText = numberOfMoves;
     gameArea.removeAttribute("class");
     gameAreaRight.classList.add("hidden");
+    winGameModal.classList.add("hidden");
     let cards = document.querySelectorAll(".card");
     let cardsLength = cards.length;
     if (cardsLength === 20) {
