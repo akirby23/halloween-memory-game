@@ -203,3 +203,15 @@ a:hover {
 .match {
     pointer-events: none;
 }
+
+#error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b2b2c0;
+    height: 40vh;
+    width: 40vw;
+    border-radius: 50px;
+    border: solid 1px;
+}
