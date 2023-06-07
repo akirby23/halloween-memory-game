@@ -282,8 +282,13 @@ function runGameHard() {
     });
 };
 
+function finishGame() {
+    winGameModal.classList.remove("hidden");
+    gameArea.classList.add("hidden");
+    gameAreaRight.classList.add("hidden");
+    document.getElementById("final-moves-count").innerText = numberOfMoves;
+}
 let card = document.querySelectorAll(".card");
-console.log(card);
 
 /**
  * Check cards for matches
@@ -305,9 +310,9 @@ function checkCards(e) {
                     let cards = document.querySelectorAll(".card");
                     let cardsLength = cards.length;
                     if (cardsLength === matchedCardsLength) {
-                        winGameModal.classList.remove("hidden");
-                        gameArea.classList.add("hidden");
-                        document.getElementById("final-moves-count").innerText = numberOfMoves;
+                        setTimeout(function () {
+                            finishGame();
+                        }, 750);
                     }
                 });
 
