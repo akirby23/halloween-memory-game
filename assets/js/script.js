@@ -11,6 +11,7 @@ const winGameModal = document.getElementById("win-game-modal");
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
 const exitGameButton = document.getElementById("exit-game");
+const winBackButton = document.getElementById("win-back-button");
 
 // Loop over each button in the array of buttons
 buttons.forEach(function (button) {
@@ -48,6 +49,11 @@ exitGameButton.addEventListener("click", function (e) {
     confirmExit();
 });
 
+winBackButton.addEventListener("click", function (e) {
+    resetGame();
+    returnHome();
+});
+
 
 /**
  * Populate the select difficulty menu from the main menu
@@ -82,6 +88,7 @@ function returnHome() {
     selectDifficultyMenu.classList.add("hidden");
     about.classList.add("hidden");
     instructions.classList.add("hidden");
+    winGameModal.classList.add("hidden");
     mainMenu.classList.remove("hidden");
     gameArea.innerHTML = "";
 }
