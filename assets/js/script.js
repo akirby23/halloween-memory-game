@@ -6,6 +6,7 @@ const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
+const winGameModal = document.getElementById("win-game-modal");
 
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
@@ -182,6 +183,7 @@ let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
  */
 function incrementMoves() {
     document.getElementById("moves").innerText = ++numberOfMoves;
+    return numberOfMoves;
 }
 
 /*
@@ -303,7 +305,9 @@ function checkCards(e) {
                     let cards = document.querySelectorAll(".card");
                     let cardsLength = cards.length;
                     if (cardsLength === matchedCardsLength) {
-                        console.log("Win!");
+                        winGameModal.classList.remove("hidden");
+                        gameArea.classList.add("hidden");
+                        document.getElementById("final-moves-count").innerText = numberOfMoves;
                     }
                 });
 

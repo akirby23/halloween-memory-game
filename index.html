@@ -96,10 +96,21 @@
         <div id="game-area-center">
 
         </div>
+        <!-- Right side of the game area containing number of moves counter, reset & exit game buttons -->
         <div id="game-area-right" class="right hidden">
             <p>Number of moves: <span id="moves">0</span></p>
             <button class="btn" id="reset-game">Reset Game</button>
             <button class="btn" id="exit-game">Exit Game</button>
+        </div>
+        <div id="win-game-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Yay! <i class=" fa-solid fa-face-laugh-beam"></i></h2>
+                <br>
+                <p>You cleared the game in <span id="final-moves-count">0</span> moves!</p>
+                <br>
+                <button type="button" class="btn">Play again</button>
+                <button type="button" class="btn">Return to the Main Menu</button>
+            </div>
         </div>
     </section>
 
