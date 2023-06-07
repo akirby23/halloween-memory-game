@@ -6,6 +6,7 @@ const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
 const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
+const gameAreaContainer = document.querySelector(".game-area-container");
 const winGameModal = document.getElementById("win-game-modal");
 
 const buttons = document.querySelectorAll("button");
@@ -125,6 +126,7 @@ function resetGame() {
     document.getElementById("moves").innerText = numberOfMoves;
     gameArea.removeAttribute("class");
     gameAreaRight.classList.add("hidden");
+    gameAreaContainer.classList.add("hidden");
     winGameModal.classList.add("hidden");
     let cards = document.querySelectorAll(".card");
     let cardsLength = cards.length;
@@ -206,6 +208,7 @@ function runGameEasy() {
     gameArea.innerHTML = '';
     gameArea.classList.add("easy");
     gameAreaRight.classList.remove("hidden");
+    gameAreaContainer.classList.remove("hidden");
     //Generate the cards
     imagePicklistEasy.forEach((item) => {
         let card = document.createElement("div");
@@ -237,6 +240,7 @@ function runGameEasy() {
 function runGameMedium() {
     gameArea.innerHTML = '';
     gameArea.classList.add("medium");
+    gameAreaContainer.classList.remove("hidden");
     gameAreaRight.classList.remove("hidden");
     //Generate the cards
     imagePicklistMedium.forEach((item) => {
@@ -270,6 +274,7 @@ function runGameHard() {
     gameArea.innerHTML = '';
     gameArea.classList.add("hard");
     gameAreaRight.classList.remove("hidden");
+    gameAreaContainer.classList.remove("hidden");
     //Generate the cards
     imagePicklistHard.forEach((item) => {
         let card = document.createElement("div");

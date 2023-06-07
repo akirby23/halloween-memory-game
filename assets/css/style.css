@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #d8b9ff;
+    background-color: #d4bcf2;
     background-image: url('../images/background/background-image.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -91,6 +91,12 @@ h1 {
 #game-area {
     display: flex;
     flex-direction: row;
+}
+
+.game-area-container {
+    background-color: rgba(46, 52, 51, 0.8);
+    padding: 20px;
+    border-radius: 5px;
 }
 
 #game-area-center {
