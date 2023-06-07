@@ -1,5 +1,4 @@
 let numberOfMoves = 0;
-let runGame = false;
 
 const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
@@ -27,15 +26,12 @@ buttons.forEach(function (button) {
         } else if (modal === "easy") {
             selectDifficultyMenu.classList.add("hidden");
             runGameEasy();
-            runGame = true;
         } else if (modal === "medium") {
             selectDifficultyMenu.classList.add("hidden");
             runGameMedium();
-            runGame = true;
         } else if (modal === "hard") {
             selectDifficultyMenu.classList.add("hidden");
             runGameHard();
-            runGame = true;
         } else if (modal === "back") {
             returnHome();
         }
