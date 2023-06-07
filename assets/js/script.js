@@ -45,7 +45,7 @@ buttons.forEach(function (button) {
 });
 
 resetGameButton.addEventListener("click", function (e) {
-    resetGame();
+    confirmReset();
 });
 
 exitGameButton.addEventListener("click", function (e) {
@@ -88,6 +88,14 @@ function returnHome() {
     instructions.classList.add("hidden");
     mainMenu.classList.remove("hidden");
 }
+
+function confirmReset() {
+    let text = "Are you sure you want to reset the game?\nYou will lose your progress until now.";
+    if (confirm(text) === true) {
+        resetGame();
+    }
+}
+
 
 function resetGame() {
     numberOfMoves = 0;
