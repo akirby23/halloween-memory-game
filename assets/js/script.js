@@ -8,6 +8,7 @@ const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
 const gameAreaContainer = document.querySelector(".game-area-container");
 const winGameModal = document.getElementById("win-game-modal");
+const cardBack = getCardBack();
 
 const buttons = document.querySelectorAll("button");
 const resetGameButton = document.getElementById("reset-game");
@@ -187,16 +188,36 @@ for (const i of removeValFromIndex.reverse()) {
 let imageArray3 = getCardFront();
 
 //Duplicate the images to create arrays of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
-const imagesEasy = [...imageArray1, ...imageArray1];
-const imagesMedium = [...imageArray2, ...imageArray2];
-const imagesHard = [...imageArray3, ...imageArray3];
+const imagePicklistEasy = [...imageArray1, ...imageArray1];
+const imagePicklistMedium = [...imageArray2, ...imageArray2];
+const imagePicklistHard = [...imageArray3, ...imageArray3];
 
-/* Randomize the image arrays to creat picklists for each difficulty level
+/* Randomizing functions
  Created with help from Stack Overflow https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array */
 
-let imagePicklistEasy = imagesEasy.sort(() => Math.random() - 0.5);
-let imagePicklistMedium = imagesMedium.sort(() => Math.random() - 0.5);
-let imagePicklistHard = imagesHard.sort(() => Math.random() - 0.5);
+/**
+ * Randomize the image picklist for Easy mode
+ */
+function randomizeEasyImages() {
+    imagePicklistEasy.sort(() => Math.random() - 0.5);
+    return imagePicklistEasy;
+}
+
+/**
+ * Randomize the image picklist for Medium mode
+ */
+function randomizeMediumImages() {
+    imagePicklistMedium.sort(() => Math.random() - 0.5);
+    return imagePicklistMedium;
+}
+
+/**
+ * Randomize the image picklist for Hard mode
+ */
+function randomizeHardImages() {
+    imagePicklistHard.sort(() => Math.random() - 0.5);
+    return imagePicklistHard;
+}
 
 /**
  * Increase number of moves by 1 each time the player selects 2 cards
@@ -215,7 +236,8 @@ function runGameEasy() {
     gameAreaRight.classList.remove("hidden");
     gameAreaContainer.classList.remove("hidden");
     //Generate the cards
-    imagePicklistEasy.forEach((item) => {
+    let gameCards = randomizeEasyImages();
+    gameCards.forEach(function (item) {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
@@ -225,6 +247,10 @@ function runGameEasy() {
         back.classList = "back";
         //Attach images to the front of the cards
         face.src = item.imgSrc;
+        let cardBack = getCardBack();
+        cardBack.forEach(function (item) {
+            back.src = item.imgSrc;
+        });
         //Assign data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
@@ -248,7 +274,8 @@ function runGameMedium() {
     gameAreaContainer.classList.remove("hidden");
     gameAreaRight.classList.remove("hidden");
     //Generate the cards
-    imagePicklistMedium.forEach((item) => {
+    let gameCards = randomizeMediumImages();
+    gameCards.forEach(function (item) {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
@@ -281,7 +308,8 @@ function runGameHard() {
     gameAreaRight.classList.remove("hidden");
     gameAreaContainer.classList.remove("hidden");
     //Generate the cards
-    imagePicklistHard.forEach((item) => {
+    let gameCards = randomizeHardImages();
+    gameCards.forEach(function (item) {
         let card = document.createElement("div");
         let face = document.createElement("img");
         let back = document.createElement("div");
