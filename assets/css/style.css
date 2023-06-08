@@ -264,3 +264,27 @@ a:hover {
         font-size: 14px;
     }
 }
+
+/* For medium screens - 768px and below */
+@media screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    .easy {
+        grid-template-columns: repeat(4, 14vh vh);
+        grid-template-rows: repeat(3, 14vh);
+        grid-gap: 20px;
+    }
+
+    .medium {
+        grid-template-columns: repeat(5, 13vh);
+        grid-template-rows: repeat(4, 13vh);
+    }
+
+    .hard {
+        grid-template-columns: repeat(5, 11vh);
+        grid-template-rows: repeat(4, 11vh);
+    }
+}
