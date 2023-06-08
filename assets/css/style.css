@@ -220,3 +220,41 @@ a:hover {
     border-radius: 50px;
     border: solid 1px;
 }
+
+/* Media queries */
+
+/* For large screens - 1200px and below */
+@media screen and (max-width: 1200px) {
+
+    h1 {
+        font-size: 3.5rem;
+        margin-top: 20px;
+    }
+
+    #game-area-center {
+        padding: 0.5rem;
+    }
+
+    #game-area-container {
+        padding: 0.5rem;
+    }
+
+    #game-area-container-right {
+        padding: 5px;
+    }
+}
+
+/* For medium-large screens - 992px and below */
+@media screen and (max-width: 992px) {
+    .main-menu {
+        border-radius: 40px;
+    }
+
+    .modal {
+        border-radius: 40px;
+    }
+
+    .modal-content {
+        font-size: 14px;
+    }
+}
