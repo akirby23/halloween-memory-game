@@ -273,18 +273,64 @@ a:hover {
     }
 
     .easy {
-        grid-template-columns: repeat(4, 14vh vh);
+        grid-template-columns: repeat(4, 14vh);
         grid-template-rows: repeat(3, 14vh);
         grid-gap: 20px;
     }
 
     .medium {
-        grid-template-columns: repeat(5, 13vh);
+        grid-template-columns: repeat(4, 13vh);
         grid-template-rows: repeat(4, 13vh);
     }
 
     .hard {
         grid-template-columns: repeat(5, 11vh);
         grid-template-rows: repeat(4, 11vh);
+    }
+
+    #game-area-container {
+        padding: 0.75rem;
+    }
+}
+
+/* For small screens - 600px and below */
+@media screen and (max-width: 600px) {
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .modal-content {
+        width: 70%;
+    }
+
+    .game-area-container {
+        padding: 0.5rem;
+    }
+
+    #game-area-right-container {
+        padding: 5px;
+    }
+
+    .right {
+        padding: 0.5rem;
+    }
+
+    .easy {
+        grid-template-columns: repeat(3, 9vh);
+        grid-template-rows: repeat(4, 9vh);
+        grid-gap: 15px;
+    }
+
+    .medium {
+        grid-template-columns: repeat(4, 7.5vh);
+        grid-template-rows: repeat(4, 7.5vh);
+        grid-gap: 10px;
+    }
+
+    .hard {
+        grid-template-columns: repeat(4, 7vh);
+        grid-template-rows: repeat(5, 7vh);
+        grid-gap: 10px;
     }
 }
