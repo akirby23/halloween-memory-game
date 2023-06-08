@@ -4,7 +4,15 @@
 
 ## User Experience
 
-### Design
+## Design
+
+### Colour Scheme
+
+### Typography
+
+- "Creepster" with a fallback font of "cursive" was used for the main heading to match the Halloween theme of the game. 
+- To compliment the heading font & the game's theme, "Voltaire" with a fallback font of "sans-serif" was used for the rest of the text in the game.
+- Both fonts were imported from Google Fonts. 
 
 ## Features
 
@@ -15,6 +23,7 @@
 ## Technologies Used
 
 ### Languages
+
 - HTML was used to write text content for the game. 
 - CSS was used to style the game. 
 - JavaScript was used to create the interactive elements of the game. 
@@ -29,7 +38,7 @@
 - [Google Fonts](https://fonts.google.com/): to import the "Creepster" and "Voltaire" fonts for the website.
 - [Font Awesome](https://fontawesome.com/): to import icons to style the modals. 
 - [Flaticon](https://www.flaticon.com/): to obtain the images for the front of the cards.
-- [Shutterstock](https://www.shutterstock.com/): to obtain the background image.
+- [Shutterstock](https://www.shutterstock.com/): to obtain the background image & to change the background colour of the image. 
 - [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
 - [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes. 
 
