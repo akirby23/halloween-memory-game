@@ -144,9 +144,9 @@ function exitGame() {
 }
 
 /**
- * Get all of the images
+ * Get the images for the front of the cards
  */
-function getImages() {
+function getCardFront() {
     return [
         { imgSrc: "assets/images/cards/halloween-balloons.png", name: "balloons" },
         { imgSrc: "assets/images/cards/halloween-castle.png", name: "castle" },
@@ -161,8 +161,14 @@ function getImages() {
     ];
 }
 
+function getCardBack() {
+    return [
+        { imgSrc: "assets/images/cards/card-back.png", name: "back" }
+    ];
+}
+
 //Get array of 6 images for Easy mode
-let imageArray1 = getImages();
+let imageArray1 = getCardFront();
 removeValFromIndex = [6, 7, 8, 9];
 
 for (const i of removeValFromIndex.reverse()) {
@@ -170,7 +176,7 @@ for (const i of removeValFromIndex.reverse()) {
 }
 
 //Get array of 8 images for Medium mode
-let imageArray2 = getImages();
+let imageArray2 = getCardFront();
 removeValFromIndex = [8, 9];
 
 for (const i of removeValFromIndex.reverse()) {
@@ -178,7 +184,7 @@ for (const i of removeValFromIndex.reverse()) {
 }
 
 //Get array of 10 images for Hard mode
-let imageArray3 = getImages();
+let imageArray3 = getCardFront();
 
 //Duplicate the images to create arrays of 12, 16 & 20 images for Easy, Medium & Hard mode respectively
 const imagesEasy = [...imageArray1, ...imageArray1];
@@ -217,7 +223,7 @@ function runGameEasy() {
         card.classList = "card";
         face.classList = "face";
         back.classList = "back";
-        //Attach images to the cards
+        //Attach images to the front of the cards
         face.src = item.imgSrc;
         //Assign data types to the cards
         card.setAttribute("data-image", item.name);
@@ -303,6 +309,7 @@ function finishGame() {
     winGameModal.classList.remove("hidden");
     gameArea.classList.add("hidden");
     gameAreaRight.classList.add("hidden");
+    gameAreaContainer.classList.add("hidden");
     document.getElementById("final-moves-count").innerText = numberOfMoves;
 }
 let card = document.querySelectorAll(".card");
