@@ -159,3 +159,7 @@ Credit to the following artists from [Flaticon](https://www.flaticon.com/) who m
 - [Umeicon](https://www.flaticon.com/authors/umeicon) who made the halloween-pumpkin icon. This artist also created the pumpkin icon used for the Favicon.
 
 ### Acknowledgements
+
+- My mentor Derek McAuley for taking the time to review my code, provide helpful feedback & for being available for any questions that I had. 
+- Sean from the tutor support team for helping me troubleshoot an issue with the event listeners for the modal buttons. 
+- My friends and family for testing the game to ensure that it's functional. Special thanks to my friend Josip for reviewing my code and helping me to troubleshoot some issues with finishing, resetting & exiting the game. 
