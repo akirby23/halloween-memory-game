@@ -14,6 +14,11 @@
 
 ## Technologies Used
 
+### Languages
+- HTML was used to write text content for the game. 
+- CSS was used to style the game. 
+- JavaScript was used to create the interactive elements of the game. 
+
 ### Frameworks, Libraries & Programs Used
 
 - [CodeAnywhere](https://app.codeanywhere.com/): to write the code.
