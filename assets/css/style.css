@@ -140,25 +140,25 @@ a:hover {
 /* Sizes the board when the user selects difficulty level "Easy" */
 .easy {
     display: grid;
-    grid-template-columns: repeat(4, 15vh);
-    grid-template-rows: repeat(3, 15vh);
+    grid-template-columns: repeat(4, 18vh);
+    grid-template-rows: repeat(3, 18vh);
     grid-gap: 30px;
 }
 
 /* Sizes the board when the user selects difficulty level "Medium" */
 .medium {
     display: grid;
-    grid-template-columns: repeat(4, 15vh);
-    grid-template-rows: repeat(4, 15vh);
-    grid-gap: 30px;
+    grid-template-columns: repeat(4, 14vh);
+    grid-template-rows: repeat(4, 14vh);
+    grid-gap: 25px;
 }
 
 /* Sizes the board when the user selects difficulty level "Hard" */
 .hard {
     display: grid;
-    grid-template-columns: repeat(5, 15vh);
-    grid-template-rows: repeat(4, 15vh);
-    grid-gap: 30px;
+    grid-template-columns: repeat(5, 13vh);
+    grid-template-rows: repeat(4, 13vh);
+    grid-gap: 20px;
 }
 
 /* Card styling */
