@@ -1,6 +1,15 @@
 # Halloween Memory Game
 
 ## Description
+Introducing Halloween Memory Game, a Halloween-themed card-flip game inspired by the classic Concentration game. 
+<br>
+The goal of the game is to find matching pairs of cards. With each card flip you'll be sure to find some spooky yet adorable surprises. 
+<br>
+The game offers 3 difficulty levels to cater for players of all ages & skill levels. 
+<br>
+Challenge your memory skills & attempt to match all cards in as little moves as possible!
+<br>
+[Link to the deployed website](https://akirby23.github.io/halloween-memory-game/)
 
 ## User Experience
 
