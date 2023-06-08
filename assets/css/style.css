@@ -104,7 +104,8 @@ a:hover {
 
 #about,
 #instructions,
-#win-game-modal {
+#win-game-modal,
+#error {
     width: 100%;
     margin: 50px auto 0 auto;
 }
@@ -220,16 +221,19 @@ a:hover {
 }
 
 /* Style the 404.html content */
-#error-container {
+#error {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #b2b2c0;
-    height: 40vh;
-    width: 40vw;
+    height: auto;
     border-radius: 50px;
     border: solid 1px;
+}
+
+#error-content {
+    padding: 10%;
 }
 
 /* Media queries */
