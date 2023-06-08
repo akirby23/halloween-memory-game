@@ -78,6 +78,15 @@ The user has a choice of two buttons to click once they finish the game:
   
 #### Future Features
 
+- Introduce varying time limits to each of the difficulty levels to further challenge the user in an exciting way.
+- Create a high score counter to add a competive aspect to the game. The fewer moves it takes to clear the game, the higher the score. 
+- Add audio to the game, with the option to toggle it on/off, for a more immersive and interactive gameplay experience. 
+  - Background music to match the Halloween theme.
+  - Card match/card mismatch sound effects.
+- Card animation for matched/mismatched cards for enhanced visual effect & interactivity.
+   - When cards match, add a blinking animation to both cards.
+   - When cards don't match, add a shaking effect before the cards flip back down. 
+  
 ### Design
 
 #### Colour Scheme
