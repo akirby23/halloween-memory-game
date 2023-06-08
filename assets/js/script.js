@@ -172,6 +172,7 @@ function exitGame() {
     resetGame();
 }
 
+
 /**
  * Get the images for the front of the cards.
  */
@@ -205,7 +206,7 @@ Created with help from Stack Overflow: https://stackoverflow.com/questions/94250
 */
 //Get array of 6 images for Easy mode
 let imageArray1 = getCardFront();
-removeValFromIndex = [6, 7, 8, 9];
+let removeValFromIndex = [6, 7, 8, 9];
 
 for (const i of removeValFromIndex.reverse()) {
     imageArray1.splice(i, 1);
@@ -287,23 +288,25 @@ function runGameEasy() {
         back.classList = "back";
         //Attach images to the front of the cards
         face.src = item.imgSrc;
-        let cardBack = getCardBack();
-        cardBack.forEach(function (item) {
-            back.src = item.imgSrc;
-        });
+        console.log(face.src);
         //Assign data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
+        let cardBack = getCardBack();
+        cardBack.forEach(function (item) {
+            back.src = item.imgSrc;
+            console.log(back.src);
+        });
         //Flip the card & run check upon clicking
         card.addEventListener("click", function (e) {
             card.classList.toggle("flipCard");
             checkCards(e);
         });
     });
-};
+}
 
 /*
  * Run the game when the user selects the difficulty "Medium".
@@ -340,7 +343,7 @@ function runGameMedium() {
             checkCards(e);
         });
     });
-};
+}
 
 /*
  * Run the game when the user selects the difficulty "Hard".
@@ -377,7 +380,7 @@ function runGameHard() {
             checkCards(e);
         });
     });
-};
+}
 
 /**
  * Once all cards are matched, the game area is hidden and the winGameModal is populated.
@@ -434,10 +437,10 @@ function checkCards(e) {
                         card.classList.remove("flipCard");
                     }, 1000);
                 });
-            };
-        };
+            }
+        }
     }
-};
+}
 
 
 
