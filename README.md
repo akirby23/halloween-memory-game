@@ -16,6 +16,18 @@
 
 ### Frameworks, Libraries & Programs Used
 
+- [CodeAnywhere](https://app.codeanywhere.com/): to write the code.
+- [Git](https://git-scm.com/): for version control, to commit & push the code to GitHub. 
+- [GitHub](https://github.com/): to store the code in its repository. 
+- [GitHub Pages](https://pages.github.com/): to deploy the website.
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/): for debugging and for testing for responsiveness on various screen sizes. 
+- [Google Fonts](https://fonts.google.com/): to import the "Creepster" and "Voltaire" fonts for the website.
+- [Font Awesome](https://fontawesome.com/): to import icons to style the modals. 
+- [Flaticon](https://www.flaticon.com/): to obtain the images for the front of the cards.
+- [Shutterstock](https://www.shutterstock.com/): to obtain the background image.
+- [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
+- [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes. 
+
 ## Testing
 
 ### Validator Testing
