@@ -1,6 +1,6 @@
 # Halloween Memory Game
 
-## Description 
+## Description
 
 ## User Experience
 
@@ -49,7 +49,9 @@
 ### Accessibility Testing
 
 ## Deployment
+
 The site was deployed to GitHub pages. The steps to deploy are as follows:
+
 - In the GitHub repository, navigate to the Settings tab.
 - On the left hand side of the page, navigate to Pages.
 - From the source section drop-down menu, select the Main Branch
@@ -59,7 +61,17 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 ### Code
 
+- 
+
 ### Media
+
+Credit to the following artists from [Flaticon](https://www.flaticon.com/) who made the images used for the front of the cards:
+
+- [iconixar](https://www.flaticon.com/authors/iconixar) who made the halloween-moon & halloween-castle icons. 
+- [tulpahn](https://www.flaticon.com/authors/tulpahn) who made the halloween-ballons icon.
+- [mavadee](https://www.flaticon.com/authors/mavadee)  who made the halloween-cat icon.
+- [Freepik](https://www.flaticon.com/authors/freepik) who made the  halloween-skeleton, halloween-bat, halloween-spider, halloween-cauldron & halloween-witch icons.
+- [Umeicon](https://www.flaticon.com/authors/umeicon) who made the halloween-pumpkin icon. This artist also created the pumpkin icon used for the Favicon.
 
 ### Acknowledgements
 
