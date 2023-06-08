@@ -412,6 +412,10 @@ function checkCards(e) {
                     let cards = document.querySelectorAll(".card");
                     let cardsLength = cards.length;
                     if (cardsLength === matchedCardsLength) {
+                        /*
+                        Delays the game finishing for 0.75 seconds when the final pair is matched. 
+                        Written with help from w3schools: https://www.w3schools.com/jsref/met_win_settimeout.asp
+                        */
                         setTimeout(function () {
                             finishGame();
                         }, 750);
@@ -422,6 +426,10 @@ function checkCards(e) {
                 incrementMoves();
                 flippedCards.forEach(function (card) {
                     card.classList.remove("flipped");
+                    /*
+                    Delays the cards flipping back for 1 second once 2 cards that don't match have been selected. 
+                    Written with help from w3schools: https://www.w3schools.com/jsref/met_win_settimeout.asp
+                    */
                     setTimeout(function () {
                         card.classList.remove("flipCard");
                     }, 1000);
