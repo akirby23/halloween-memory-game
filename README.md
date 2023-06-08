@@ -8,6 +8,18 @@
 
 ### Colour Scheme
 
+![Colour pallette - created using coolors.co](assets/images/colour-pallette/halloween-memory-game-colour-pallette.png)
+
+- #09070B was used for the text & button styling.
+- #2E3433 was used to style the buttons.
+- rgba(46, 52, 51, 0.8) was used as a transparent background behind the game area, in order to for the background image to remain visible while not distracting from the elements within the game area. 
+- #434B4B was used as a background colour for the modals & game cards. 
+- #D4BCF2 was used as the background colour & also matches the background image. 
+- #FFFFFF was used to add contrast to the buttons. 
+
+The black & grey colours were generated from the halloween-castle icon via [ImageColorPicker](https://imagecolorpicker.com) for consistency & to match the Halloween theme.
+A lilac colour was chosen as the background colour to add a dash of cuteness to the spooky theme, making it more playful & approachable. 
+
 ### Typography
 
 - "Creepster" with a fallback font of "cursive" was used for the main heading to match the Halloween theme of the game. 
@@ -41,8 +53,9 @@
 - [Shutterstock](https://www.shutterstock.com/): to obtain the background image & to change the background colour of the image. 
 - [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
 - [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes. 
+- [ImageColorPicker](https://imagecolorpicker.com/): to generate the colour palette from the halloween-castle icon.
+- [Coolors.co](https://coolors.co/241e20-8c6a4f-ffffff-3c5648-76a38f): to generate the colour palette for the README file.
   
-
 ## Testing
 
 ### Validator Testing
