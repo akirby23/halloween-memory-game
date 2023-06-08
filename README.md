@@ -41,6 +41,7 @@
 - [Shutterstock](https://www.shutterstock.com/): to obtain the background image & to change the background colour of the image. 
 - [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
 - [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes. 
+  
 
 ## Testing
 
@@ -61,7 +62,10 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 
 ### Code
 
-- 
+- [w3schools](https://www.w3schools.com/) was consulted regularly for help with writing the HTML, CSS & Javascript.
+- [Stack Overflow](stackoverflow) was consulted regularly for help with writing HTML, CSS & JavaScript and troubleshooting issues. 
+- Inspiration was taken from [developedbyed](https://www.youtube.com/@developedbyed)'s [Memory Card Game Tutorial](https://www.youtube.com/watch?v=-tlb4tv4mC4&t=2180s) to generate the game's cards using JavaScript. 
+- Inspiration was taken from the [Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) project to create event listeners for the modal buttons by targeting their data types in if/else statements. 
 
 ### Media
 
