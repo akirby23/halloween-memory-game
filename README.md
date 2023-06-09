@@ -127,6 +127,13 @@ The user has a choice of two buttons to click once they finish the game:
   - The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu. 
   - The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game from the buttons that will bring them back to the main menu.  
   
+##### 404.html 
+
+![404 page message](documentation/readme/features/404-page.PNG)
+
+- The game includes a custom 404 - Page Not Found page to redirect users back to the home page if they happen to stumble upon a missing or broken page. 
+- A hyperlink is included that the user can click to safely return to the home page. 
+
 #### Future Features
 
 - Introduce varying time limits to each of the difficulty levels to further challenge the user in an exciting way.
@@ -179,7 +186,7 @@ A lilac colour was chosen as the background colour to add a dash of cuteness to 
 - [Google Fonts](https://fonts.google.com/): to import the "Creepster" and "Voltaire" fonts for the website.
 - [Font Awesome](https://fontawesome.com/): to import icons to style the modals.
 - [Flaticon](https://www.flaticon.com/): to obtain the images for the front of the cards.
-- [Shutterstock](https://www.shutterstock.com/): to obtain the background image & to change the background colour of the image.
+- [Shutterstock](https://www.shutterstock.com/): to obtain the background image & image for the back of the cards. The background colour of both images was changed via the same website. 
 - [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
 - [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes.
 - [ImageColorPicker](https://imagecolorpicker.com/): to generate the colour palette from the halloween-castle icon.
