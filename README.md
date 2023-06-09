@@ -166,6 +166,24 @@ It passed without any warnings.
 
 ### Accessibility Testing
 
+Lighthouse audits were run for the website on mobile & desktop to test for any accessibility issues. 
+
+#### Mobile
+
+A perfect score was achieved for Accessibility, Best Practices & SEO. 
+
+![Lighthouse mobile audit](documentation/readme/lighthouse/lighthouse-audit-mobile.PNG)
+
+Performance suffered slightly due to cache issues. 
+
+![Lighthouse mobile performance diagnostics](documentation/readme/lighthouse/lighthouse-audit-mobile-diagnostics.PNG)
+
+#### Desktop 
+
+A perfect score was achieved for Performance, Accessibility, Best Practices & SEO. 
+
+![Lighthouse desktop audit](documentation/readme/lighthouse/lighthouse-audit-desktop.PNG)
+
 ## Deployment
 
 The site was deployed to GitHub pages. The steps to deploy are as follows:
