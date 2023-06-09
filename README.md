@@ -140,35 +140,42 @@ A lilac colour was chosen as the background colour to add a dash of cuteness to 
 
 ### Validator Testing
 
-#### HTML
+<details>
+<summary>HTML</summary>
 
 The HTML was validated via the [W3C Markup Validation Service](https://validator.w3.org/).
 
 ![HTML validated via the W3C Markup Validation Service](documentation/readme/validator-testing/html-validated.PNG)
 
-It passed without warnings or errors. 
+It passed without warnings or errors.
+</details>
 
-#### CSS
+<details>
+<summary>CSS</summary>
 
 The CSS was validated via the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
 
 ![CSS validated via the W3C CSS Validation Service](documentation/readme/validator-testing/css-validated.PNG)
 
 It passed without any issues or warnings. 
+</details>
 
-#### JavaScript
+<details>
+<summary>JavaScript</summary>
 
 The JavaScript was validated via [JSHint](https://jshint.com/).
 
 ![JavaScript validated via JSHint](documentation/readme/validator-testing/javascript-validated.PNG)
 
 It passed without any warnings. 
+</details>
 
 ### Accessibility Testing
 
 Lighthouse audits were run for the website on mobile & desktop to test for any accessibility issues. 
 
-#### Mobile
+<details>
+<summary>Mobile</summary>
 
 A perfect score was achieved for Accessibility, Best Practices & SEO. 
 
@@ -178,11 +185,15 @@ Performance suffered slightly due to cache issues.
 
 ![Lighthouse mobile performance diagnostics](documentation/readme/lighthouse/lighthouse-audit-mobile-diagnostics.PNG)
 
-#### Desktop 
+</details>
+
+<details>
+<summary>Desktop</summary>
 
 A perfect score was achieved for Performance, Accessibility, Best Practices & SEO. 
 
 ![Lighthouse desktop audit](documentation/readme/lighthouse/lighthouse-audit-desktop.PNG)
+</details>
 
 ## Deployment
 
