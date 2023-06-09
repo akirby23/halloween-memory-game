@@ -125,7 +125,7 @@ The user has a choice of two buttons to click once they finish the game:
 
   - This button allows the user to safely return back to the main menu.
   - The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu. 
-  - The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game or the buttons that will bring them back to the main menu.  
+  - The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game from the buttons that will bring them back to the main menu.  
   
 #### Future Features
 
@@ -243,6 +243,14 @@ A perfect score was achieved for Performance, Accessibility, Best Practices & SE
 
 ![Lighthouse desktop audit](documentation/readme/lighthouse/lighthouse-audit-desktop.PNG)
 </details>
+
+### Bugs
+
+| Issue | Notes | Status
+| ---| ---| ---|
+|If the user resets the game, or exits the game via the Exit Game button and starts a new game via the Main Menu, the cards are not re-randomized.|Randomized arrays were being generated prior to the game being run. Created functions for each difficulty to randomize their image picklists and nested these functions within the runGame() functions for each difficulty level to ensure that the image arrays are being randomized every time the game is run.|Fixed
+|If the user selects a card, then subsequently selects the same card, the card is flipped down and this action is counted as a move on the moves counter.|Set pointer-events on the flipped cards to "none" to ensure that the user cannot click on the same card again. As a result the moves counter will only increase when the user selects a second card.|Fixed
+|If the user exits the game, then subsequently starts a new game on a different difficulty level, the game area is not sized correctly. ![Board sized incorrectly bug](documentation/bugs/board-size-bug.PNG)|As the size of the game area is being pulled from the classes, updated the resetGame() function to remove the classes from the game area to ensure that they can be re-added once the game is run again.|Fixed
 
 ## Deployment
 
