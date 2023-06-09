@@ -86,6 +86,7 @@ The user has a choice of two buttons to click once they finish the game:
 - Card animation for matched/mismatched cards for enhanced visual effect & interactivity.
    - When cards match, add a blinking animation to both cards.
    - When cards don't match, add a shaking effect before the cards flip back down. 
+- Replace confirm() alerts with modals to improve the UI & accessibility.
   
 ### Design
 
