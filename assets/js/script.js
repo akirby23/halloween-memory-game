@@ -6,8 +6,8 @@ const mainMenu = document.getElementById("main-menu");
 const selectDifficultyMenu = document.getElementById("difficulty");
 const about = document.getElementById("about");
 const instructions = document.getElementById("instructions");
-const gameArea = document.getElementById("game-area-center");
-const gameAreaRight = document.getElementById("game-area-right");
+const gameArea = document.getElementById("game-area-main");
+const gameAreaSide = document.getElementById("game-area-side");
 const gameAreaContainer = document.querySelector(".game-area-container");
 const winGameModal = document.getElementById("win-game-modal");
 
@@ -149,7 +149,7 @@ function resetGame() {
     numberOfMoves = 0;
     document.getElementById("moves").innerText = numberOfMoves;
     gameArea.removeAttribute("class");
-    gameAreaRight.classList.add("hidden");
+    gameAreaSide.classList.add("hidden");
     gameAreaContainer.classList.add("hidden");
     winGameModal.classList.add("hidden");
     let cards = document.querySelectorAll(".card");
@@ -270,7 +270,7 @@ function incrementMoves() {
 function runGameEasy() {
     gameArea.innerHTML = '';
     gameArea.classList.add("easy");
-    gameAreaRight.classList.remove("hidden");
+    gameAreaSide.classList.remove("hidden");
     gameAreaContainer.classList.remove("hidden");
     /*
     Generate the cards.
@@ -308,7 +308,7 @@ function runGameMedium() {
     gameArea.innerHTML = '';
     gameArea.classList.add("medium");
     gameAreaContainer.classList.remove("hidden");
-    gameAreaRight.classList.remove("hidden");
+    gameAreaSide.classList.remove("hidden");
     /*
     Generate the cards.
     Inspiration for the code taken from a YouTube tutorial by developedbyed: https://www.youtube.com/watch?v=-tlb4tv4mC4&t=2180s
@@ -344,7 +344,7 @@ function runGameMedium() {
 function runGameHard() {
     gameArea.innerHTML = '';
     gameArea.classList.add("hard");
-    gameAreaRight.classList.remove("hidden");
+    gameAreaSide.classList.remove("hidden");
     gameAreaContainer.classList.remove("hidden");
     /*
     Generate the cards
@@ -383,7 +383,7 @@ function runGameHard() {
 function finishGame() {
     winGameModal.classList.remove("hidden");
     gameArea.classList.add("hidden");
-    gameAreaRight.classList.add("hidden");
+    gameAreaSide.classList.add("hidden");
     gameAreaContainer.classList.add("hidden");
     document.getElementById("final-moves-count").innerText = numberOfMoves;
 }
