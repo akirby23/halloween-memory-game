@@ -190,15 +190,6 @@ function getCardFront() {
     ];
 }
 
-/**
- * Get image for the back of the cards.
- */
-function getCardBack() {
-    return [
-        { imgSrc: "assets/images/cards/halloween-pumpkin.png", name: "back" },
-    ];
-}
-
 /*
 Generate image picklists.
 Created with help from Stack Overflow: https://stackoverflow.com/questions/9425009/remove-multiple-elements-from-array-in-javascript-jquery

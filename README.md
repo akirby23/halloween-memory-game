@@ -9,7 +9,7 @@ Challenge your memory skills & attempt to match all cards in as little moves as 
 <br>
 [Link to the deployed website](https://akirby23.github.io/halloween-memory-game/)
 
-![Halloween Memory Game displayed on various screen sizes](assets/images/readme/am-i-responsive-pp2.PNG)
+![Halloween Memory Game displayed on various screen sizes](documentation/readme/am-i-responsive.PNG)
 
 ## User Experience
 
@@ -94,7 +94,7 @@ The user has a choice of two buttons to click once they finish the game:
 
 #### Colour Scheme
 
-![Colour pallette - created using coolors.co](assets/images/readme/halloween-memory-game-colour-pallette.png)
+![Colour pallette - created using coolors.co](documentation/readme/halloween-memory-game-colour-pallette.png)
 
 - #09070B was used for the text & button styling.
 - #2E3433 was used to style the buttons.
@@ -139,6 +139,30 @@ A lilac colour was chosen as the background colour to add a dash of cuteness to 
 ## Testing
 
 ### Validator Testing
+
+#### HTML
+
+The HTML was validated via the [W3C Markup Validation Service](https://validator.w3.org/).
+
+![HTML validated via the W3C Markup Validation Service](documentation/readme/validator-testing/html-validated.PNG)
+
+It passed without warnings or errors. 
+
+#### CSS
+
+The CSS was validated via the [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/).
+
+![CSS validated via the W3C CSS Validation Service](documentation/readme/validator-testing/css-validated.PNG)
+
+It passed without any issues or warnings. 
+
+#### JavaScript
+
+The JavaScript was validated via [JSHint](https://jshint.com/).
+
+![JavaScript validated via JSHint](documentation/readme/validator-testing/javascript-validated.PNG)
+
+It passed without any warnings. 
 
 ### Accessibility Testing
 
