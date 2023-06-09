@@ -10,7 +10,7 @@ const gameArea = document.getElementById("game-area-center");
 const gameAreaRight = document.getElementById("game-area-right");
 const gameAreaContainer = document.querySelector(".game-area-container");
 const winGameModal = document.getElementById("win-game-modal");
-const cardBack = getCardBack();
+
 
 // Button constants
 const buttons = document.querySelectorAll("button");
