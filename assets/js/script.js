@@ -11,7 +11,6 @@ const gameAreaRight = document.getElementById("game-area-right");
 const gameAreaContainer = document.querySelector(".game-area-container");
 const winGameModal = document.getElementById("win-game-modal");
 const cardBack = getCardBack();
-const card = document.querySelectorAll(".card");
 
 // Button constants
 const buttons = document.querySelectorAll("button");
@@ -196,7 +195,7 @@ function getCardFront() {
  */
 function getCardBack() {
     return [
-        { imgSrc: "assets/images/cards/card-back.png", name: "back" }
+        { imgSrc: "assets/images/cards/halloween-pumpkin.png", name: "back" },
     ];
 }
 
@@ -288,18 +287,12 @@ function runGameEasy() {
         back.classList = "back";
         //Attach images to the front of the cards
         face.src = item.imgSrc;
-        console.log(face.src);
         //Assign data types to the cards
         card.setAttribute("data-image", item.name);
         //Append cards to the section
         gameArea.appendChild(card);
         card.appendChild(face);
         card.appendChild(back);
-        let cardBack = getCardBack();
-        cardBack.forEach(function (item) {
-            back.src = item.imgSrc;
-            console.log(back.src);
-        });
         //Flip the card & run check upon clicking
         card.addEventListener("click", function (e) {
             card.classList.toggle("flipCard");

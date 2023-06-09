@@ -191,6 +191,9 @@ a:hover {
 .back {
     background: #b2b2c0;
     backface-visibility: hidden;
+    background-image: url("../images/cards/card-back.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .face {
