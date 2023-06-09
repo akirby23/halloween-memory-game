@@ -39,16 +39,16 @@ The main menu contains the following buttons that allow the user to navigate bet
 
 ![About button](documentation/readme/features/about-button.PNG)
 
-  - The About button on the main menu populates a modal that gives the user a brief description of the game.
-  - This section also contains a link to the GitHub page of the developer.
-  - The user can either start a new game or return to the main menu from the about section.
+- The About button on the main menu populates a modal that gives the user a brief description of the game.
+- This section also contains a link to the GitHub page of the developer.
+- The user can either start a new game or return to the main menu from the about section.
 
 ###### Instructions button
 
 ![Instructions button](documentation/readme/features/instructions-button.PNG)
 
-  - The Instructions button on the main menu populates a modal that contains an ordered list of the game's instruction.
-  - The user can either start a new game or return to the main menu from the instructions section.
+- The Instructions button on the main menu populates a modal that contains an ordered list of the game's instructions.
+- The user can either start a new game or return to the main menu from the instructions section.
 
 ##### Select Difficulty menu
 
@@ -73,37 +73,41 @@ The user can either choose to play the game on Easy, Medium or Hard mode, or ret
 ##### Game page
 
 ###### Game area
-  - The game area contains a board of 12, 16 or 20 cards, depending on the difficulty level selected by the user.
-  - All cards are facing down by default. When the user clicks on a card, it will flip over to reveal the image on the front. The user will no longer be able to click on the same card - they will need to pick a new card in order to proceed. 
-  - If both cards have identical images, the cards will remain flipped up and will no longer be clickable.
+
+- The game area contains a board of 12, 16 or 20 cards, depending on the difficulty level selected by the user.
+- All cards are facing down by default. When the user clicks on a card, it will flip over to reveal the image on the front. The user will no longer be able to click on the same card - they will need to pick a new card in order to proceed.
+- If both cards have identical images, the cards will remain flipped up and will no longer be clickable.
 
 ![Halloween Memory Game in progress](documentation/readme/features/game-in-progress.PNG)
 
-  - If the images on the cards do not match, they will be flipped back down so the user can try again.
+- If the images on the cards do not match, they will be flipped back down so the user can try again.
   
 ###### Number of Moves counter
 
 ![Number of moves counter](documentation/readme/features/moves-counter.PNG)
 
-  - The user gets to select 2 cards for each move.
-  - Once the user selects 2 cards, the number of moves will increase by 1, regardless of whether or not the cards match.
+- The user gets to select 2 cards for each move.
+- Once the user selects 2 cards, the number of moves will increase by 1, regardless of whether or not the cards match.
+
 ###### Reset Game button
 
 ![Reset game button](documentation/readme/features/reset-game.PNG)
-  - This button allows the user to easily start the game again without the need to return to the main menu.
-  - Upon clicking the button the user will be prompted to confirm their decision to reset the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
+
+- This button allows the user to easily start the game again without the need to return to the main menu.
+- Upon clicking the button the user will be prompted to confirm their decision to reset the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
 ![Confirm reset alert](documentation/readme/features/confirm-reset.PNG)
-  - If the user confirms their choice the cards will be flipped back down & re-randomized. The number of moves counter will also be reverted back to 0.
-  - If the user cancels, they will be able to continue with the game.
+- If the user confirms their choice the cards will be flipped back down & re-randomized. The number of moves counter will also be reverted back to 0.
+- If the user cancels, they will be able to continue with the game.
   
 ###### Exit Game button
 
 ![Exit game button](documentation/readme/features/exit-game.PNG)
-  - This button allows the user to safely exit the game and return to the main menu.
-  - Upon clicking the button the user will be prompted to confirm their decision to exit the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
+
+- This button allows the user to safely exit the game and return to the main menu.
+- Upon clicking the button the user will be prompted to confirm their decision to exit the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
 ![Confirm exit alert](documentation/readme/features/confirm-reset.PNG)
-  - If the user confirms their decision to exit the game, they will be returned to the main menu. The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu.  
-  - If the user cancels, they will be able to continue with the game.
+- If the user confirms their decision to exit the game, they will be returned to the main menu. The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu.  
+- If the user cancels, they will be able to continue with the game.
 
 ##### Win game window
 
@@ -117,33 +121,33 @@ The user has a choice of two buttons to click once they finish the game:
 
 ![Play again button](documentation/readme/features/play-again.PNG)
 
-  - This button resets the game and returns a fresh deck of cards, matching the same difficulty level that the user initially selected.
+- This button resets the game and returns a fresh deck of cards, matching the same difficulty level that the user initially selected.
   
 ###### Return to the Main Menu button
 
 ![Return to the Main Menu button](documentation/readme/features/return-to-main-menu-button.PNG)
 
-  - This button allows the user to safely return back to the main menu.
-  - The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu. 
-  - The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game from the buttons that will bring them back to the main menu.  
+- This button allows the user to safely return back to the main menu.
+- The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu.
+- The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game from the buttons that will bring them back to the main menu.  
   
-##### 404.html 
+##### 404.html
 
 ![404 page message](documentation/readme/features/404-page.PNG)
 
-- The game includes a custom 404 - Page Not Found page to redirect users back to the home page if they happen to stumble upon a missing or broken page. 
-- A hyperlink is included that the user can click to safely return to the home page. 
+- The game includes a custom 404 - Page Not Found page to redirect users back to the home page if they happen to stumble upon a missing or broken page.
+- A hyperlink is included that the user can click to safely return to the home page.
 
 #### Future Features
 
 - Introduce varying time limits to each of the difficulty levels to further challenge the user in an exciting way.
-- Create a high score counter to add a competive aspect to the game. The fewer moves it takes to clear the game, the higher the score. 
-- Add audio to the game, with the option to toggle it on/off, for a more immersive and interactive gameplay experience. 
+- Create a high score counter to add a competitive aspect to the game. The fewer moves it takes to clear the game, the higher the score.
+- Add audio to the game, with the option to toggle it on/off, for a more immersive and interactive gameplay experience.
   - Background music to match the Halloween theme.
   - Card match/card mismatch sound effects.
 - Card animation for matched/mismatched cards for enhanced visual effect & interactivity.
-   - When cards match, add a blinking animation to both cards.
-   - When cards don't match, add a shaking effect before the cards flip back down. 
+  - When cards match, add a blinking animation to both cards.
+  - When cards don't match, add a shaking effect before the cards flip back down.
 - Replace confirm() alerts with modals to improve the UI & accessibility.
   
 ### Design
@@ -154,7 +158,7 @@ The user has a choice of two buttons to click once they finish the game:
 
 - #09070B was used for the text & button styling.
 - #2E3433 was used to style the buttons.
-- rgba(46, 52, 51, 0.8) was used as a transparent background behind the game area, in order to for the background image to remain visible while not distracting from the elements within the game area.
+- rgba(46, 52, 51, 0.8) was used as a transparent background behind the game area, in order for the background image to remain visible while not distracting from the elements within the game area.
 - #434B4B was used as a background colour for the modals & game cards.
 - #D4BCF2 was used as the background colour & also matches the background image.
 - #FFFFFF was used to add contrast to the buttons.
@@ -186,7 +190,7 @@ A lilac colour was chosen as the background colour to add a dash of cuteness to 
 - [Google Fonts](https://fonts.google.com/): to import the "Creepster" and "Voltaire" fonts for the website.
 - [Font Awesome](https://fontawesome.com/): to import icons to style the modals.
 - [Flaticon](https://www.flaticon.com/): to obtain the images for the front of the cards.
-- [Shutterstock](https://www.shutterstock.com/): to obtain the background image & image for the back of the cards. The background colour of both images was changed via the same website. 
+- [Shutterstock](https://www.shutterstock.com/): to obtain the background image & image for the back of the cards. The background colour of both images was changed via the same website.
 - [Favicon](https://favicon.io/): to generate the favicon & to obtain links to add the favicon to the website.
 - [AmIResponsive](https://ui.dev/amiresponsive): to test the website's responsiveness on screens of different sizes.
 - [ImageColorPicker](https://imagecolorpicker.com/): to generate the colour palette from the halloween-castle icon.
@@ -213,7 +217,7 @@ The CSS was validated via the [W3C CSS Validation Service](https://jigsaw.w3.org
 
 ![CSS validated via the W3C CSS Validation Service](documentation/readme/validator-testing/css-validated.PNG)
 
-It passed without any issues or warnings. 
+It passed without any issues or warnings.
 </details>
 
 <details>
@@ -223,21 +227,21 @@ The JavaScript was validated via [JSHint](https://jshint.com/).
 
 ![JavaScript validated via JSHint](documentation/readme/validator-testing/javascript-validated.PNG)
 
-It passed without any warnings. 
+It passed without any warnings.
 </details>
 
 ### Accessibility Testing
 
-Lighthouse audits were run for the website on mobile & desktop to test for any accessibility issues. 
+Lighthouse audits were run for the website on mobile & desktop to test for any accessibility issues.
 
 <details>
 <summary>Mobile</summary>
 
-A perfect score was achieved for Accessibility, Best Practices & SEO. 
+A perfect score was achieved for Accessibility, Best Practices & SEO.
 
 ![Lighthouse mobile audit](documentation/readme/lighthouse/lighthouse-audit-mobile.PNG)
 
-Performance suffered slightly due to cache issues. 
+Performance suffered slightly due to cache issues.
 
 ![Lighthouse mobile performance diagnostics](documentation/readme/lighthouse/lighthouse-audit-mobile-diagnostics.PNG)
 
@@ -246,16 +250,16 @@ Performance suffered slightly due to cache issues.
 <details>
 <summary>Desktop</summary>
 
-A perfect score was achieved for Performance, Accessibility, Best Practices & SEO. 
+A perfect score was achieved for Performance, Accessibility, Best Practices & SEO.
 
 ![Lighthouse desktop audit](documentation/readme/lighthouse/lighthouse-audit-desktop.PNG)
 </details>
 
-### Manual Testing 
+### Manual Testing
 
-- The game was tested on Google Chrome, Microsoft Edge, Firefox, Opera & Safari. It worked as expected on all browsers, both on mobile & desktop view. 
-- The responsiveness of the game was tested on Chrome DevToos & AmIResponsive to ensure that the game functions and behaves as expected on mobile, phones, tablets, laptops and desktop devices. 
-- Links were tested to ensure that they either open the correct page in a separate tab or redirect the user to the correct page. 
+- The game was tested on Google Chrome, Microsoft Edge, Firefox, Opera & Safari. It worked as expected on all browsers, both on mobile & desktop view.
+- The responsiveness of the game was tested on Chrome DevTools & AmIResponsive to ensure that the game functions and behaves as expected on mobile, phones, tablets, laptops and desktop devices.
+- Links were tested to ensure that they either open the correct page in a separate tab or redirect the user to the correct page.
   
 ### Bugs
 
@@ -263,7 +267,7 @@ A perfect score was achieved for Performance, Accessibility, Best Practices & SE
 | ---| ---| ---|
 |If the user resets the game, or exits the game via the Exit Game button and starts a new game via the Main Menu, the cards are not re-randomized.|Randomized arrays were being generated prior to the game being run. Created functions for each difficulty to randomize their image picklists and nested these functions within the runGame() functions for each difficulty level to ensure that the image arrays are being randomized every time the game is run.|Fixed
 |If the user selects a card, then subsequently selects the same card, the card is flipped down and this action is counted as a move on the moves counter.|Set pointer-events on the flipped cards to "none" to ensure that the user cannot click on the same card again. As a result the moves counter will only increase when the user selects a second card.|Fixed
-|If the user exits the game, then subsequently starts a new game on a different difficulty level, the game area is not sized correctly. ![Board sized incorrectly bug](documentation/bugs/board-size-bug.PNG)|As the size of the game area is being pulled from the classes, updated the resetGame() function to remove the classes from the game area to ensure that they can be re-added once the game is run again.|Fixed
+|If the user exits the game, then subsequently starts a new game on a different difficulty level, the game area is not sized correctly. ![Board sized incorrectly bug](documentation/bugs/board-size-bug.PNG)|As the size of the game area is being pulled from the classes, the resetGame() function was updated to remove the classes from the game area to ensure that they can be re-added once the game is run again.|Fixed
 
 ## Deployment
 
@@ -289,14 +293,14 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 - Credit to the following artists from [Flaticon](https://www.flaticon.com/) who made the images used for the front of the cards:
 
   - [iconixar](https://www.flaticon.com/authors/iconixar) who made the halloween-moon & halloween-castle icons.
-  - [tulpahn](https://www.flaticon.com/authors/tulpahn) who made the halloween-ballons icon.
+  - [tulpahn](https://www.flaticon.com/authors/tulpahn) who made the halloween-balloons icon.
   - [mavadee](https://www.flaticon.com/authors/mavadee)  who made the halloween-cat icon.
   - [Freepik](https://www.flaticon.com/authors/freepik) who made the  halloween-skeleton, halloween-bat, halloween-spider, halloween-cauldron & halloween-witch icons.
   - [Umeicon](https://www.flaticon.com/authors/umeicon) who made the halloween-pumpkin icon. This artist also created the pumpkin icon used for the Favicon.
-- The background image & card back image were obtained from Shutterstock. 
+- The background image & card back image were obtained from Shutterstock.
   
 ### Acknowledgements
 
-- My mentor Derek McAuley for taking the time to review my code, provide helpful feedback & for being available for any questions that I had. 
-- Sean from the tutor support team for helping me troubleshoot an issue with the event listeners for the modal buttons. 
-- My friends and family for testing the game to ensure that it's functional. Special thanks to my friend Josip for reviewing my code and helping me to troubleshoot some issues with finishing, resetting & exiting the game. 
+- My mentor Derek McAuley for taking the time to review my code, provide helpful feedback & for being available for any questions that I had.
+- Sean from the tutor support team for helping me troubleshoot an issue with the event listeners for the modal buttons.
+- My friends and family for testing the game to ensure that it's functional. Special thanks to my friend Josip for reviewing my code and helping me to troubleshoot some issues with finishing, resetting & exiting the game.
