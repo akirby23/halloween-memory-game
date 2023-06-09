@@ -19,64 +19,113 @@ Challenge your memory skills & attempt to match all cards in as little moves as 
 
 ##### Header
 
+![Header](documentation/readme/features/header.PNG)
+
 The header contains the title of the game in a delightfully creepy "Creepster" font.
 
 ##### Main Menu
 
+![Main menu](documentation/readme/features/main-menu.PNG)
+
 The main menu contains the following buttons that allow the user to navigate between the main menu, about & instructions sections and the game itself:
 
-- New Game button
+###### New Game button
 
-  - The New Game button will populate the Select Difficulty menu in the form of a modal.
-- About button
+![New game button](documentation/readme/features/new-game-button.PNG)
+
+- The New Game button will populate the Select Difficulty menu in the form of a modal.
+  
+###### About button
+
+![About button](documentation/readme/features/about-button.PNG)
+
   - The About button on the main menu populates a modal that gives the user a brief description of the game.
   - This section also contains a link to the GitHub page of the developer.
   - The user can either start a new game or return to the main menu from the about section.
-- Instructions button
+
+###### Instructions button
+
+![Instructions button](documentation/readme/features/instructions-button.PNG)
+
   - The Instructions button on the main menu populates a modal that contains an ordered list of the game's instruction.
   - The user can either start a new game or return to the main menu from the instructions section.
 
 ##### Select Difficulty menu
+
+![Select difficulty menu](documentation/readme/features/select-difficulty-menu.PNG)
 
 The Select Difficulty menu populates when the user starts a new game from the main menu.
 <br>
 The user can either choose to play the game on Easy, Medium or Hard mode, or return to the main menu.
 
 - If the user chooses to play the game on Easy mode, the game will run and a board of 12 cards will be generated.
+  
+![Game area on Easy mode](documentation/readme/features/game-area-easy.PNG)
+
 - If the user chooses to play the game on Medium mode, the game will run and a board of 16 cards will be generated.
+
+![Game area on Medium mode](documentation/readme/features/game-area-medium.PNG)
+
 - If the user chooses to play the game on Hard mode, the game will run and a board of 20 cards will be generated.
+
+![Game area on Hard mode](documentation/readme/features/game-area-hard.PNG)
   
 ##### Game page
 
-- Game area
+###### Game area
   - The game area contains a board of 12, 16 or 20 cards, depending on the difficulty level selected by the user.
-  - All cards are facing down by default. When the user clicks on a card, it will flip over to reveal the image on the front.
+  - All cards are facing down by default. When the user clicks on a card, it will flip over to reveal the image on the front. The user will no longer be able to click on the same card - they will need to pick a new card in order to proceed. 
   - If both cards have identical images, the cards will remain flipped up and will no longer be clickable.
+
+![Halloween Memory Game in progress](documentation/readme/features/game-in-progress.PNG)
+
   - If the images on the cards do not match, they will be flipped back down so the user can try again.
-- Number of Moves counter
+  
+###### Number of Moves counter
+
+![Number of moves counter](documentation/readme/features/moves-counter.PNG)
+
   - The user gets to select 2 cards for each move.
   - Once the user selects 2 cards, the number of moves will increase by 1, regardless of whether or not the cards match.
-- Reset Game button
+###### Reset Game button
+
+![Reset game button](documentation/readme/features/reset-game.PNG)
   - This button allows the user to easily start the game again without the need to return to the main menu.
   - Upon clicking the button the user will be prompted to confirm their decision to reset the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
+![Confirm reset alert](documentation/readme/features/confirm-reset.PNG)
   - If the user confirms their choice the cards will be flipped back down & re-randomized. The number of moves counter will also be reverted back to 0.
   - If the user cancels, they will be able to continue with the game.
-- Exit Game button
+  
+###### Exit Game button
+
+![Exit game button](documentation/readme/features/exit-game.PNG)
   - This button allows the user to safely exit the game and return to the main menu.
   - Upon clicking the button the user will be prompted to confirm their decision to exit the game via a confirm() alert to ensure that progress is not lost in the event of a misclick.
+![Confirm exit alert](documentation/readme/features/confirm-reset.PNG)
   - If the user confirms their decision to exit the game, they will be returned to the main menu. The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu.  
+  - If the user cancels, they will be able to continue with the game.
 
 ##### Win game window
+
+![Win game window](documentation/readme/features/win-game.PNG)
 
 Once all cards have been matched, a modal will appear that will celebrate the user's win.
 The user will be informed of how many moves it took them to clear the game.
 The user has a choice of two buttons to click once they finish the game:
 
-- Play again button
+###### Play again button
+
+![Play again button](documentation/readme/features/play-again.PNG)
+
   - This button resets the game and returns a fresh deck of cards, matching the same difficulty level that the user initially selected.
-- Return to the Main Menu button
+  
+###### Return to the Main Menu button
+
+![Return to the Main Menu button](documentation/readme/features/return-to-main-menu-button.PNG)
+
   - This button allows the user to safely return back to the main menu.
-  - The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu.  
+  - The game will also be reset to ensure that a fresh new game can be started if the user opts to start a new game from the main menu. 
+  - The styling for this button has been inverted to differentiate between the buttons that allow the user to proceed with the game or the buttons that will bring them back to the main menu.  
   
 #### Future Features
 
