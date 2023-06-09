@@ -129,7 +129,7 @@ a:hover {
     padding: 1rem;
 }
 
-#game-area-side-container {
+#game-menu-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -326,7 +326,7 @@ a:hover {
         padding: 0.5rem;
     }
 
-    #game-area-side-container {
+    #game-menu-container {
         padding: 5px;
         flex-direction: column;
     }
