@@ -298,6 +298,10 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
   - [Freepik](https://www.flaticon.com/authors/freepik) who made the  halloween-skeleton, halloween-bat, halloween-spider, halloween-cauldron & halloween-witch icons.
   - [Umeicon](https://www.flaticon.com/authors/umeicon) who made the halloween-pumpkin icon. This artist also created the pumpkin icon used for the Favicon.
 - The background image & card back image were obtained from Shutterstock.
+
+### Content 
+
+- Inspiration for the game was taken from the classic memory card-flip game, Concentration. 
   
 ### Acknowledgements
 
