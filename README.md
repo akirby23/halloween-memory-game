@@ -251,6 +251,12 @@ A perfect score was achieved for Performance, Accessibility, Best Practices & SE
 ![Lighthouse desktop audit](documentation/readme/lighthouse/lighthouse-audit-desktop.PNG)
 </details>
 
+### Manual Testing 
+
+- The game was tested on Google Chrome, Microsoft Edge, Firefox, Opera & Safari. It worked as expected on all browsers, both on mobile & desktop view. 
+- The responsiveness of the game was tested on Chrome DevToos & AmIResponsive to ensure that the game functions and behaves as expected on mobile, phones, tablets, laptops and desktop devices. 
+- Links were tested to ensure that they either open the correct page in a separate tab or redirect the user to the correct page. 
+  
 ### Bugs
 
 | Issue | Notes | Status
@@ -276,6 +282,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 - [Stack Overflow](stackoverflow) was consulted regularly for help with writing HTML, CSS & JavaScript and troubleshooting issues.
 - Inspiration was taken from [developedbyed](https://www.youtube.com/@developedbyed)'s [Memory Card Game Tutorial](https://www.youtube.com/watch?v=-tlb4tv4mC4&t=2180s) to generate the game's cards using JavaScript.
 - Inspiration was taken from the [Love Maths](https://github.com/Code-Institute-Solutions/love-maths-2.0-sourcecode) project to create event listeners for the modal buttons by targeting their data types in if/else statements.
+- Button styling was inspired by button 50 on [getcssscan.com](getcssscan.com/css-buttons-examples).
 
 ### Media
 
