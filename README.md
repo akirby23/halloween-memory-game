@@ -9,6 +9,8 @@ Challenge your memory skills & attempt to match all cards in as little moves as 
 <br>
 [Link to the deployed website](https://akirby23.github.io/halloween-memory-game/)
 
+![Halloween Memory Game displayed on various screen sizes](assets/images/readme/am-i-responsive-pp2.PNG)
+
 ## User Experience
 
 ### Features
@@ -92,7 +94,7 @@ The user has a choice of two buttons to click once they finish the game:
 
 #### Colour Scheme
 
-![Colour pallette - created using coolors.co](assets/images/colour-pallette/halloween-memory-game-colour-pallette.png)
+![Colour pallette - created using coolors.co](assets/images/readme/halloween-memory-game-colour-pallette.png)
 
 - #09070B was used for the text & button styling.
 - #2E3433 was used to style the buttons.
